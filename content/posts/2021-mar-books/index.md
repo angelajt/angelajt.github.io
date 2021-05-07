@@ -1,10 +1,11 @@
 ---
 title: Books I read in March 2021
 date: '2021-04-04'
-tags: ["books"]
+tags: 
+- books
+featuredImage: images/bookssmall.png
 ---
 
-![books](bookssmall.png)
 
 Like a lot of people, I was a really avid reader in elementary and early middle school, but my 
 reading sort of just fell off a cliff in middle/high school as I became more and more 

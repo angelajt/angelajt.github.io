@@ -4,9 +4,10 @@ summary: A simple school dashboard template with a stellar twist!
 date: '2021-03-31'
 tags: 
 - notion
+featuredImage: images/cover.png
+enableComment: true
 ---
 
-![cover](cover.png)
 
 [**✨ Link to Template**](https://www.notion.so/School-Dashboard-Template-7c3703592ca54494995773e475ee2599)
 *(Click "Duplicate" on the top right to get started!)*
