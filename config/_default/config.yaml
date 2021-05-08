@@ -40,4 +40,4 @@ taxonomies:
   author: authors
 
 build:
-  useResourceCacheWhen: never
+  useResourceCacheWhen: always
