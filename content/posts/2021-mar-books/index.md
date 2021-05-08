@@ -4,6 +4,8 @@ date: '2021-04-04'
 tags: 
 - books
 featuredImage: images/bookssmall.png
+aliases:
+- /2021-mar-books
 ---
 
 
