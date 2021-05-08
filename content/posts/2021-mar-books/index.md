@@ -8,7 +8,6 @@ aliases:
 - /2021-mar-books
 ---
 
-
 Like a lot of people, I was a really avid reader in elementary and early middle school, but my 
 reading sort of just fell off a cliff in middle/high school as I became more and more 
 preoccupied with much more important things, like zoning out in class and collecting half-used pens. 

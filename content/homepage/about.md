@@ -2,7 +2,7 @@
 title:
 draft: false
 role:
-avatar:
+avatar: images/sprout.png
 bio: Hi! I'm Angela, a computer science student who loves space, nature, and books.
 organization:
   name:
