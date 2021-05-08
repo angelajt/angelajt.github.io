@@ -1,9 +1,9 @@
 ---
-title: About
+title:
 draft: false
 role:
 avatar:
-bio:
+bio: Hi! I'm Angela, a computer science student who loves space, nature, and books.
 organization:
   name:
   url:
