@@ -11,7 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload"
-  href="https://fonts.googleapis.com/css2?family=Merriweather&family=Trispace&family=Montserrat:wght@700;800;900&family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Merriweather&family=Trispace&family=Montserrat:wght@700;800;900&family=Lora:wght@400;600;700&family=Trispace&family=Noto+Serif+SC:wght@400;600;700&display=swap"
   as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
@@ -98,7 +98,10 @@
         },
     "description": "Hi, I\u0026rsquo;m Angela! This is my new blog where I plan to post about whatever\u0026rsquo;s on my mind, as well as things I\u0026rsquo;m working on."
 }
-</script><meta property="og:title" content="Welcome to my blog! | Angela&#39;s Blog" />
+</script>
+<meta property="og:title" content="Welcome to my blog!" />
+
+
 <meta property="og:type" content="article" />
 
 
@@ -138,6 +141,7 @@
 
 
 <meta property="article:tag" content="meta" />
+
 
 
 
@@ -219,8 +223,8 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">Welcome to my blog!</h1>
-        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+        <h1 class="font-sans font-extrabold text-3xl text-primary-text">Welcome to my blog!</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 font-mono text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar mr-1"></i>
         <span>2021-02-02</span>
@@ -234,9 +238,11 @@
 
     
 </div>
+
         
         
         
+
 
         <div class="content">
             <p>Hi, I&rsquo;m Angela! This is my new blog where I plan to post about whatever&rsquo;s on my mind, as well as things I&rsquo;m working on.</p>
@@ -264,13 +270,10 @@
     <div>
         
         <span class="block font-bold">Previous</span>
-        <a href="/posts/picogym/" class="block">picoGym Writeups</a>
+        <a href="/posts/notion-school/" class="block">Notion school dashboard template</a>
         
     </div>
     <div class="md:text-right mt-4 md:mt-0">
-        
-        <span class="block font-bold">Next</span>
-        <a href="/posts/2021-apr-books/" class="block"></a>
         
     </div>
 </div>
@@ -278,6 +281,19 @@
         
 
 
+
+  <script id="utterances" src="https://utteranc.es/client.js"
+            issue-term=og:title
+            repo=angelajt/blog
+              theme=preferred-color-scheme
+        crossorigin="anonymous"
+        async>
+</script>
+<script>
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+      document.getElementById('utterances').setAttribute('theme', 'github-dark')
+    }
+</script>
 
     </div>
     

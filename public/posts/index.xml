@@ -28,39 +28,12 @@
     </item>
     
     <item>
-      <title>picoGym Writeups</title>
-      <link>/posts/picogym/</link>
-      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/picogym/</guid>
-      <description>Writeups for picoCTF&amp;rsquo;s practice competition.</description>
-    </item>
-    
-    <item>
       <title>Welcome to my blog!</title>
       <link>/posts/firstpost/</link>
       <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>/posts/firstpost/</guid>
       <description>Hi, I&amp;rsquo;m Angela! This is my new blog where I plan to post about whatever&amp;rsquo;s on my mind, as well as things I&amp;rsquo;m working on.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/posts/2021-apr-books/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2021-apr-books/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/posts/backyard-birds/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/backyard-birds/</guid>
-      <description></description>
     </item>
     
   </channel>
