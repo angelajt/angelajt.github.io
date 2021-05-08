@@ -4,7 +4,8 @@ date: '2021-02-16'
 summary: Writeups for picoCTF's practice competition.
 tags: ["CTF"]
 toc: true
-draft: true
+aliases:
+- /picogym
 ---
 
 ## General Information

@@ -5,17 +5,12 @@ date: '2021-03-31'
 tags: 
 - notion
 featuredImage: images/cover.png
-enableComment: true
+aliases:
+- /notion-school
 ---
-
 
 [**✨ Link to Template**](https://www.notion.so/School-Dashboard-Template-7c3703592ca54494995773e475ee2599)
 *(Click "Duplicate" on the top right to get started!)*
-
-```toc
-from-heading: 2
-to-heading: 2
-```
 
 I started using [Notion](https://www.notion.so) a little over a year ago to keep track of my academic life, and I've been in love with it ever since. I really like how versatile yet robust it is — I use it to write notes for my classes (especially for Computer Science, since it supports code blocks), plan out the courses I need for my degree, and keep track of all of my assignments. As someone who's usually terribly disorganized and forgetful, I always love finding new tools and methods to keep my life on track.
 
