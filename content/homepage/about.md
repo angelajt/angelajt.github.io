@@ -14,6 +14,9 @@ social:
   - icon: instagram
     iconPack: fab
     url: https://instagram.com/angelajt
+  - icon: github
+    iconPack: fab
+    url: https://github.com/angelajt
 
 weight:
 widget:
