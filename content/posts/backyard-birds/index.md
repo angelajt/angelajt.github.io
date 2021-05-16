@@ -15,6 +15,8 @@ Spring is underway and I've been enjoying listening to birdsong and spotting bir
 
 ### California Scrub Jay
 
+> *Aphelocoma californica*
+
 These feisty birds have a distinctive pattern of blue, grey, and white feathers. California Scrub Jays live in wooded areas and dine on seeds, nuts, insects, and small animals (as well as my cats' food). Their calls are loud and shrill, which makes it no surprise that they're in the Corvidae family, which includes crows and ravens.
 
 ---
@@ -23,6 +25,8 @@ These feisty birds have a distinctive pattern of blue, grey, and white feathers.
 
 ### Black Phoebe
 
+> *Sayornis nigricans*
+
 Black Phoebes are flycatchers, which means they get their food by catching insects out of midair. As their name suggests, these little birds are primarily black, but with a white-grey underbelly. They can usually be found perching on fence posts and low rooftops close to the ground, giving out short, high chirps.
 
 ---
@@ -30,6 +34,8 @@ Black Phoebes are flycatchers, which means they get their food by catching insec
 ![Anna's Hummingbird](annas-hummingbird.png)
 
 ### Anna's Hummingbird
+
+> *Calypte anna*
 
 Anna's hummingbirds are the tiniest and flashiest birds I've seen in the wild. Males have iridescent red head feathers, and enjoy perching on the highest branches of trees and letting out long series of shrill trills. Most impressive is their way of courting females — first, a male soars up and hovers as high as 130 feet while trilling. Then, he dives down at speeds of over 50 miles per hour, and lets out a single, earsplitting chirp with his tail feathers at the bottom of his dive. He performs this display multiple times in a row in front of his target.
 
@@ -41,6 +47,8 @@ Anna's hummingbirds are the tiniest and flashiest birds I've seen in the wild. M
 
 ### Mourning Dove
 
+> *Zenaida macroura*
+
 These birds live up to their name with their slow, plaintive coos. Mourning Doves mate for life, and they nest in trees and forage for seeds on the ground. One fact about them that I found interesting is that when they take off, they make a quick whistling sound — however, similar to the Anna's hummingbird's tail chirp, this whistling actually comes from their wing feathers.
 
 ---
@@ -48,6 +56,8 @@ These birds live up to their name with their slow, plaintive coos. Mourning Dove
 ![House Finch](house-finch.png)
 
 ### House Finch
+
+> *Haemorhous mexicanus*
 
 House finches are native to western North America, where they live in a a wide variety of habitats ranging from urban to rural areas, and from dry deserts to forests. These red-headed birds can now be found increasingly throughout the US as people introduced them to urban areas in the eastern US in the mid 20th century. Their song is a long, continuous warble of varied notes.
 
