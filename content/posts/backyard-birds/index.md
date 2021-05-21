@@ -59,7 +59,7 @@ These birds live up to their name with their slow, plaintive coos. Mourning Dove
 
 > *Haemorhous mexicanus*
 
-House finches are native to western North America, where they live in a a wide variety of habitats ranging from urban to rural areas, and from dry deserts to forests. These red-headed birds can now be found increasingly throughout the US as people introduced them to urban areas in the eastern US in the mid 20th century. Their song is a long, continuous warble of varied notes.
+House finches are native to western North America, where they live in a wide variety of habitats ranging from urban to rural areas, and from dry deserts to forests. These red-headed birds can now be found increasingly throughout the US as people introduced them to urban areas in the eastern US in the mid 20th century. Their song is a long, continuous warble of varied notes.
 
 ---
 
