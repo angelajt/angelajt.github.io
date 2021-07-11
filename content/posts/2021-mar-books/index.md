@@ -3,7 +3,6 @@ title: Books I read in March 2021
 date: '2021-04-04'
 tags: 
 - books
-featuredImage: images/bookssmall.png
 aliases:
 - /2021-mar-books
 ---

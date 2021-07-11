@@ -4,7 +4,6 @@ summary: A simple school dashboard template with a stellar twist!
 date: '2021-03-31'
 tags: 
 - notion
-featuredImage: images/cover.png
 aliases:
 - /notion-school
 ---

@@ -3,7 +3,6 @@ title: Books I Read in April 2021
 date: '2021-05-18'
 tags: 
 - books
-featuredImage: images/woods.png
 description: A long overdue review of the 5 books I read last month.
 ---
 
