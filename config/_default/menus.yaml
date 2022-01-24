@@ -11,3 +11,6 @@ main:
   - name: Docs
     url: /docs/
     weight: 4
+  - name: Spotify
+    url: /spotify/
+    weight: 5
