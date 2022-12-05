@@ -2,6 +2,7 @@
 title: Welcome to my blog!
 date: '2021-02-02'
 tags: ["meta"]
+draft: true
 ---
 Hi, I'm Angela! This is my new blog where I plan to post about whatever's on my mind, as well as things I'm working on.
 
