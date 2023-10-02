@@ -1,40 +1,282 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Angela&#39;s Blog</title>
-    <link>/posts/</link>
-    <description>Recent content in Posts on Angela&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy; 2021 Angela Traugott 
+    <channel>
+        <title>Posts on Angela&#39;s Blog</title>
+        <link>https://angelajt.com/posts/</link>
+        <description>Recent content in Posts on Angela&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>&amp;copy; 2021 Angela Traugott 
 </copyright>
-    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Books I read in March 2021</title>
-      <link>/posts/2021-mar-books/</link>
-      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2021-mar-books/</guid>
-      <description>Like a lot of people, I was a really avid reader in elementary and early middle school, but my reading sort of just fell off a cliff in middle/high school as I became more and more preoccupied with much more important things, like zoning out in class and collecting half-used pens.</description>
-    </item>
-    
-    <item>
-      <title>Notion school dashboard template</title>
-      <link>/posts/notion-school/</link>
-      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/notion-school/</guid>
-      <description>A simple school dashboard template with a stellar twist!</description>
-    </item>
-    
-    <item>
-      <title>Welcome to my blog!</title>
-      <link>/posts/firstpost/</link>
-      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/firstpost/</guid>
-      <description>Hi, I&amp;rsquo;m Angela! This is my new blog where I plan to post about whatever&amp;rsquo;s on my mind, as well as things I&amp;rsquo;m working on.</description>
-    </item>
-    
-  </channel>
+        <lastBuildDate>Sat, 25 Dec 2021 17:35:45 -0800</lastBuildDate><atom:link href="https://angelajt.com/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>2021 Recap</title>
+        <link>https://angelajt.com/posts/2021-recap/2021-recap/</link>
+        <pubDate>Sat, 25 Dec 2021 17:35:45 -0800</pubDate>
+        
+        <guid>https://angelajt.com/posts/2021-recap/2021-recap/</guid>
+        <description>&lt;p&gt;Merry Christmas! 2021 went by so fast that I completely neglected
+this blog for half the year, haha. Here&amp;rsquo;s some stuff I did this
+past year (aside from school, which took up like 150% of my time)!&lt;/p&gt;
+&lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
+&lt;p&gt;My Reading Challenge on Goodreads was to read 30 books. I&amp;rsquo;ve met
+that goal (almost &amp;ndash; I&amp;rsquo;m on my last book right now), although I
+included short stories and smaller booklets in that challenge. A
+list of full-length books I read this year, excluding short
+stories/booklets:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Trading in Danger&lt;/em&gt; by Elizabeth Moon&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Life on Mars&lt;/em&gt; by Tracy K. Smith&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Marque and Reprisal&lt;/em&gt; by Elizabeth Moon&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Call Down the Hawk&lt;/em&gt; by Maggie Stiefvater&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Raven Boys&lt;/em&gt; by Maggie Stiefvater (reread)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Klara and the Sun&lt;/em&gt; by Kazuo Ishiguro&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;A Brief History of Time&lt;/em&gt; by Stephen Hawking&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;These Violent Delights&lt;/em&gt; by Chloe Gong&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Atomic Habits&lt;/em&gt; by James Clear&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Hobbit&lt;/em&gt; by J.R.R. Tolkien&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Winter Hours&lt;/em&gt; by Mary Oliver&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Swan&lt;/em&gt; by Mary Oliver&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Fellowship of the Ring&lt;/em&gt; by J.R.R. Tolkien&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Upstream&lt;/em&gt; by Mary Oliver&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;How to Be More Tree&lt;/em&gt; by Liz Marvin&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;An American Sunrise&lt;/em&gt; by Joy Harjo&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Two Towers&lt;/em&gt; by J.R.R. Tolkien&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Drinking Coffee Elsewhere&lt;/em&gt; by ZZ Packer&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Howl&amp;rsquo;s Moving Castle&lt;/em&gt; by Diana Wynne Jones&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Fences&lt;/em&gt; by August Wilson&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Return of the King&lt;/em&gt; by J.R.R. Tolkien&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Red Bird&lt;/em&gt; by Mary Oliver&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;An American Marriage&lt;/em&gt; by Tayari Jones&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Legendborn&lt;/em&gt; by Tracy Deonn&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Owls and Other Fantasies&lt;/em&gt; by Mary Oliver&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Our Violent Ends&lt;/em&gt; by Chloe Gong (currently reading)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;NANA vol. 1&lt;/em&gt; by Ai Yazawa (currently reading)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;projects&#34;&gt;Projects&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://angelajt.com/posts/notion-school/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Notion School Dashboard Template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/angelajt/bintags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bin Tags&lt;/a&gt;, an order
+tracking system I wrote for my CS Honors Project.&lt;/li&gt;
+&lt;li&gt;DIY Light/Humidity sensor using Adafruit boards, for my plants,
+still a work-in-progress :P (I worked on this a lot during break
+before starting Summer classes).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other-random-stats&#34;&gt;Other Random Stats&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Birds identified: &lt;code&gt;45&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Number of minutes listening to music on Spotify: &lt;code&gt;27,247&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Number of minutes learning languages on Duolingo: &lt;code&gt;1,356&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Ancient Deer of the Pleistocene Epoch</title>
+        <link>https://angelajt.com/posts/pleistocene-deer/</link>
+        <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/posts/pleistocene-deer/</guid>
+        <description>&lt;p&gt;&lt;em&gt;(Featured image: An outdated 1910 illustration of the Irish Elk)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The Pleistocene Epoch, also known as the Great Ice Age, was a geologic time period that began 2.6 million years ago and ended 11,700 years ago. It was marked by extensive glaciation and climate change, as well as the emergence of humans. It was the last epoch before our own, the modern-day Holocene.&lt;/p&gt;
+&lt;p&gt;The Pleistocene saw many awe-inspiring megafauna, such as the &lt;a class=&#34;link&#34; href=&#34;https://www.britannica.com/animal/mammoth-extinct-mammal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mammoth&lt;/a&gt;, the &lt;a class=&#34;link&#34; href=&#34;https://www.britannica.com/animal/woolly-rhinoceros&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;woolly rhinoceros&lt;/a&gt;, and the &lt;a class=&#34;link&#34; href=&#34;https://www.britannica.com/animal/Diprotodon&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;giant wombat&lt;/a&gt;. It also saw many species of giant deer, including what is now considered to be the largest deer that ever existed. Below are a few beautiful and impressive species of Pleistocene deer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/pleistocene-deer/eucladoceros.png&#34;
+	width=&#34;1280&#34;
+	height=&#34;883&#34;
+	srcset=&#34;https://angelajt.com/posts/pleistocene-deer/eucladoceros_hu1e37dce01485c6010b5261f634d8136f_1406358_480x0_resize_box_3.png 480w, https://angelajt.com/posts/pleistocene-deer/eucladoceros_hu1e37dce01485c6010b5261f634d8136f_1406358_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Bush-antlered deer&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;bush-antlered-deer&#34;&gt;Bush-antlered Deer&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Eucladoceros dicranios&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The &lt;strong&gt;bush-antlered deer&lt;/strong&gt;, &lt;em&gt;Eucladoceros&lt;/em&gt;, was one of the earlier forms of deer, having been around during the Pliocene, the epoch preceding the Pleistocene beginning about 4 million years ago. The most iconic species of the genus, &lt;em&gt;Eucladoceros dicranios&lt;/em&gt;, had glorious branching antlers that spanned over 5½ feet wide! (They remind me a bit of the &lt;a class=&#34;link&#34; href=&#34;https://ghibli.fandom.com/wiki/Forest_Spirit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;deer god from Princess Mononoke&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Eucladoceros&lt;/em&gt; enjoyed warmer climates and inhabited the &lt;a class=&#34;link&#34; href=&#34;http://stsmith.faculty.anth.ucsb.edu/classes/anth3/courseware/Pleistocene/6_Bestiary.html#Eucladoceros&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;middle latitudes of Eurasia&lt;/a&gt;, all the way from the Iberian peninsula to the northern coasts bordering the Sea of Japan. This deer went extinct sometime in the early-to-mid Pleistocene, likely due to cooling climates and loss of vegetation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/pleistocene-deer/cervalces.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;https://angelajt.com/posts/pleistocene-deer/cervalces_hua4c2a88c16714634cccedda42e53b1a2_1549183_480x0_resize_box_3.png 480w, https://angelajt.com/posts/pleistocene-deer/cervalces_hua4c2a88c16714634cccedda42e53b1a2_1549183_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Stag-moose&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;stag-moose&#34;&gt;Stag-moose&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Cervalces scotti&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Native to North America, the &lt;strong&gt;stag-moose&lt;/strong&gt; had a magestic and complex set of palmate (or &amp;ldquo;webbed&amp;rdquo;) antlers and was slightly larger than the modern-day moose — &lt;em&gt;Alces alces&lt;/em&gt;, the largest currently living deer in the world. &lt;em&gt;Cervalces scotti&lt;/em&gt; was found primarily in the Midwest and some parts of the eastern US, and lived in wetland habitats similar to those of the modern-day moose. The stag-moose went extinct sometime during the transition between the Pleistocene and the Holocene epochs, along with many other species of megafauna during the &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Quaternary_extinction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quaternary extinction&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/pleistocene-deer/megaloceros.png&#34;
+	width=&#34;1100&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://angelajt.com/posts/pleistocene-deer/megaloceros_hua4a3d1c02507edbd9033e59e8678461c_1352867_480x0_resize_box_3.png 480w, https://angelajt.com/posts/pleistocene-deer/megaloceros_hua4a3d1c02507edbd9033e59e8678461c_1352867_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Irish elk&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;366px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;irish-elk&#34;&gt;Irish Elk&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Megaloceros giganteus&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My favorite (and perhaps the most well-known) Pleistocene deer is the &lt;strong&gt;Irish Elk&lt;/strong&gt;, also known as the &lt;strong&gt;Giant Deer&lt;/strong&gt;. Although this deer lived throughout Europe and Asia, notable well-preserved fossils were found in peat bogs in Ireland, which gave the Irish Elk its name. Like the stag-moose, &lt;em&gt;Megaloceros giganteus&lt;/em&gt; faced extinction after the beginning of the Holocene some 11,000 years ago, although some Irish Elk fossils have been found which may have dated back only 7,000–⁠8,000 years.&lt;/p&gt;
+&lt;p&gt;Although some sources say that &lt;a class=&#34;link&#34; href=&#34;https://ucmp.berkeley.edu/mammal/artio/irishelk.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;the Irish Elk was the largest deer to have ever existed&lt;/a&gt;, other sources say that &lt;a class=&#34;link&#34; href=&#34;https://books.google.com/books?id=bcWZX-IMEVkC&amp;amp;pg=PA122&amp;amp;source=gbs_toc_r&amp;amp;cad=4#v=onepage&amp;amp;q=Cervalces%20latifrons&amp;amp;f=false&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this title may have actually belonged to the &lt;em&gt;much&lt;/em&gt; larger &lt;em&gt;Cervalces latifrons&lt;/em&gt;&lt;/a&gt;, the broad-fronted moose (a relative of the stag-moose). While I&amp;rsquo;m not entirely sure, this disparity might have arisen because the Irish Elk was discovered and catalogued in Europe much earlier than the broad-fronted moose, and is generally more widely known. Nevertheless, the Irish Elk&amp;rsquo;s magestic set of palmated antlers were no doubt the largest of any species of deer, spanning over 12 feet wide!&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;h3 id=&#34;information&#34;&gt;Information&lt;/h3&gt;
+&lt;p&gt;Johnson, W. Hilton. &amp;ldquo;Pleistocene Epoch&amp;rdquo;. Encyclopedia Britannica, 30 Jul. 2018, &lt;a class=&#34;link&#34; href=&#34;https://www.britannica.com/science/Pleistocene-Epoch&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.britannica.com/science/Pleistocene-Epoch&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Freedman, Jan. “The Beast of the Woods.” TwilightBeasts, 12 Oct. 2018, &lt;a class=&#34;link&#34; href=&#34;https://twilightbeasts.org/2018/10/12/the-beast-of-the-woods&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://twilightbeasts.org/2018/10/12/the-beast-of-the-woods&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Michaels, George H., and Brian M. Fagan. “A Pleistocene Bestiary.” Univeristy of California Santa Barbara, 2006, &lt;a class=&#34;link&#34; href=&#34;http://stsmith.faculty.anth.ucsb.edu/classes/anth3/courseware/Pleistocene/6_Bestiary.html#Eucladoceros&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://stsmith.faculty.anth.ucsb.edu/classes/anth3/courseware/Pleistocene/6_Bestiary.html#Eucladoceros&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;“Stag-Moose.” Explore the Ice Age Midwest, Illinois State Museum, 2015, &lt;a class=&#34;link&#34; href=&#34;http://iceage.museum.state.il.us/mammals/stag-moose-0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://iceage.museum.state.il.us/mammals/stag-moose-0&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;“The Case of the Irish Elk.” UC Museum of Paleontology, 1996, &lt;a class=&#34;link&#34; href=&#34;https://ucmp.berkeley.edu/mammal/artio/irishelk.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ucmp.berkeley.edu/mammal/artio/irishelk.html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Geist, Valerius. Deer of the world: their evolution, behaviour, and ecology. United States, Stackpole Books, 1998.&lt;/p&gt;
+&lt;h3 id=&#34;images&#34;&gt;Images&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Irish Elk (featured)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Doflein, Franz; Hesse, Richard, Public domain, via Wikimedia Commons&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stag-moose&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Dantheman9758 at English Wikipedia, CC BY 3.0 &lt;a class=&#34;link&#34; href=&#34;https://creativecommons.org/licenses/by/3.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://creativecommons.org/licenses/by/3.0&lt;/a&gt;, via Wikimedia Commons&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bush-antlered Deer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ghedoghedo, CC BY-SA 3.0 &lt;a class=&#34;link&#34; href=&#34;https://creativecommons.org/licenses/by-sa/3.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://creativecommons.org/licenses/by-sa/3.0&lt;/a&gt;, via Wikimedia Commons&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Irish Elk&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ghedoghedo, CC BY-SA 4.0 &lt;a class=&#34;link&#34; href=&#34;https://creativecommons.org/licenses/by-sa/4.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://creativecommons.org/licenses/by-sa/4.0&lt;/a&gt;, via Wikimedia Commons&lt;/p&gt;
+&lt;p&gt;Pavel.Riha.CB, CC BY-SA 3.0 &lt;a class=&#34;link&#34; href=&#34;http://creativecommons.org/licenses/by-sa/3.0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://creativecommons.org/licenses/by-sa/3.0/&lt;/a&gt;, via Wikimedia Commons&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Notion school dashboard template</title>
+        <link>https://angelajt.com/posts/notion-school/</link>
+        <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/posts/notion-school/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.notion.so/School-Dashboard-Template-7c3703592ca54494995773e475ee2599&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;✨ Link to Template&lt;/strong&gt;&lt;/a&gt;
+&lt;em&gt;(Click &amp;ldquo;Duplicate&amp;rdquo; on the top right to get started!)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I started using &lt;a class=&#34;link&#34; href=&#34;https://www.notion.so&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Notion&lt;/a&gt; a little over a year ago to keep track of my academic life, and I&amp;rsquo;ve been in love with it ever since. I really like how versatile yet robust it is — I use it to write notes for my classes (especially for Computer Science, since it supports code blocks), plan out the courses I need for my degree, and keep track of all of my assignments. As someone who&amp;rsquo;s usually terribly disorganized and forgetful, I always love finding new tools and methods to keep my life on track.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/angelajtc/status/1361465004277395456&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;I made a school dashboard with Notion recently&lt;/a&gt;, which organizes everything school-related into one holistic, easy-to-navigate view. This free-to-use template is a slight improvement of the school dashboard I personally use. Space headers can be found in &lt;a class=&#34;link&#34; href=&#34;https://esahubble.org/images/archive/wallpapers/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ESA/Hubble&amp;rsquo;s wallpaper gallery&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Questions? Suggestions?&lt;/strong&gt; Leave a comment down below or contact me on &lt;a class=&#34;link&#34; href=&#34;https://twitter.com/angelajtc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Twitter&lt;/a&gt;!&lt;/p&gt;
+&lt;h2 id=&#34;-features&#34;&gt;🔑 Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A database to keep track of all of your past, current, and future &lt;strong&gt;courses&lt;/strong&gt; — including prerequisites, meeting times, and more.&lt;/li&gt;
+&lt;li&gt;A database to keep track of your &lt;strong&gt;assignments&lt;/strong&gt; — including course, due dates, and completion status.&lt;/li&gt;
+&lt;li&gt;An optional &lt;strong&gt;academic plan&lt;/strong&gt; page with courses organized in a table view, best for long-term planning or brainstorming,.&lt;/li&gt;
+&lt;li&gt;An optional &lt;strong&gt;course schedule&lt;/strong&gt; page with courses organized in a board view, best for sorting by semester/quarter/etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Class notes&lt;/strong&gt; for every course.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-how-to-use&#34;&gt;💡 How To Use&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-course&#34;&gt;Create a new course&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the little arrow next to the blue &lt;code&gt;New&lt;/code&gt; button in the &lt;strong&gt;Courses&lt;/strong&gt; section and select the &lt;code&gt;⭐ New Subject&lt;/code&gt; template.&lt;/li&gt;
+&lt;li&gt;Now you can fill out the course information under the properties at the top, add a header, change the icon, etc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(The above method also works if you&amp;rsquo;re in the Academic Plan or Course Schedule page.)&lt;/p&gt;
+&lt;h3 id=&#34;start-keeping-track-of-assignments&#34;&gt;Start keeping track of assignments&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Scroll down to the &lt;strong&gt;Assignments&lt;/strong&gt; calendar and click on the &lt;code&gt;+&lt;/code&gt; button on the day the assignment is due.&lt;/li&gt;
+&lt;li&gt;Under the &lt;code&gt;Course&lt;/code&gt; property on the assignment&amp;rsquo;s page, create a new option for your new course (you can change the color to match that of the course option you set above).&lt;/li&gt;
+&lt;li&gt;Now navigate back to the dashboard and click on your new course.&lt;/li&gt;
+&lt;li&gt;Under the &lt;strong&gt;Assignments&lt;/strong&gt; section, click on &lt;code&gt;Filter&lt;/code&gt; and select the course (&amp;ldquo;Where Course is [course]&amp;rdquo;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(Still trying to figure out how to link the Courses and Assignments databases so that you don&amp;rsquo;t have to create what&amp;rsquo;s essentially the same course option twice, but I haven&amp;rsquo;t figured out a clean way to do it.)&lt;/p&gt;
+&lt;h2 id=&#34;-gallery&#34;&gt;🌟 Gallery&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/overview2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1540&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/overview2_hu0b8b27b2130c082e1f0485c1d3d812be_1693365_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/overview2_hu0b8b27b2130c082e1f0485c1d3d812be_1693365_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;overview&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;299px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/academicplan.png&#34;
+	width=&#34;1439&#34;
+	height=&#34;852&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/academicplan_hu63efac80cbf4a52f0070d72249cca77e_125439_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/academicplan_hu63efac80cbf4a52f0070d72249cca77e_125439_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;academic plan&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;168&#34;
+		data-flex-basis=&#34;405px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/courseschedule.png&#34;
+	width=&#34;1668&#34;
+	height=&#34;922&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/courseschedule_hu7dcb1baa3e39ca18a240f8b1575726d2_94325_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/courseschedule_hu7dcb1baa3e39ca18a240f8b1575726d2_94325_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;course schedule&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;434px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/coursepage2.png&#34;
+	width=&#34;1568&#34;
+	height=&#34;1490&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/coursepage2_hu4e42fca651b885511b26fdcd9166a2a6_1064289_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/coursepage2_hu4e42fca651b885511b26fdcd9166a2a6_1064289_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;course page&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;252px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

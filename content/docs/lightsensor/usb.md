@@ -3,6 +3,7 @@ title: '2. Getting measurements through USB'
 date: 2021-06-15
 draft: false
 toc: true
+weight: 2
 ---
 
 ## a. Upload the code

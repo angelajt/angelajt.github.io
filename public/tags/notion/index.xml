@@ -1,22 +1,111 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>notion on Angela&#39;s Blog</title>
-    <link>/tags/notion/</link>
-    <description>Recent content in notion on Angela&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy; 2021 Angela Traugott 
+    <channel>
+        <title>notion on Angela&#39;s Blog</title>
+        <link>https://angelajt.com/tags/notion/</link>
+        <description>Recent content in notion on Angela&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>&amp;copy; 2021 Angela Traugott 
 </copyright>
-    <lastBuildDate>Wed, 31 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/notion/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Notion school dashboard template</title>
-      <link>/posts/notion-school/</link>
-      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/notion-school/</guid>
-      <description>A simple school dashboard template with a stellar twist!</description>
-    </item>
-    
-  </channel>
+        <lastBuildDate>Wed, 31 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://angelajt.com/tags/notion/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Notion school dashboard template</title>
+        <link>https://angelajt.com/posts/notion-school/</link>
+        <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/posts/notion-school/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.notion.so/School-Dashboard-Template-7c3703592ca54494995773e475ee2599&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;✨ Link to Template&lt;/strong&gt;&lt;/a&gt;
+&lt;em&gt;(Click &amp;ldquo;Duplicate&amp;rdquo; on the top right to get started!)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I started using &lt;a class=&#34;link&#34; href=&#34;https://www.notion.so&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Notion&lt;/a&gt; a little over a year ago to keep track of my academic life, and I&amp;rsquo;ve been in love with it ever since. I really like how versatile yet robust it is — I use it to write notes for my classes (especially for Computer Science, since it supports code blocks), plan out the courses I need for my degree, and keep track of all of my assignments. As someone who&amp;rsquo;s usually terribly disorganized and forgetful, I always love finding new tools and methods to keep my life on track.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/angelajtc/status/1361465004277395456&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;I made a school dashboard with Notion recently&lt;/a&gt;, which organizes everything school-related into one holistic, easy-to-navigate view. This free-to-use template is a slight improvement of the school dashboard I personally use. Space headers can be found in &lt;a class=&#34;link&#34; href=&#34;https://esahubble.org/images/archive/wallpapers/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ESA/Hubble&amp;rsquo;s wallpaper gallery&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Questions? Suggestions?&lt;/strong&gt; Leave a comment down below or contact me on &lt;a class=&#34;link&#34; href=&#34;https://twitter.com/angelajtc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Twitter&lt;/a&gt;!&lt;/p&gt;
+&lt;h2 id=&#34;-features&#34;&gt;🔑 Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A database to keep track of all of your past, current, and future &lt;strong&gt;courses&lt;/strong&gt; — including prerequisites, meeting times, and more.&lt;/li&gt;
+&lt;li&gt;A database to keep track of your &lt;strong&gt;assignments&lt;/strong&gt; — including course, due dates, and completion status.&lt;/li&gt;
+&lt;li&gt;An optional &lt;strong&gt;academic plan&lt;/strong&gt; page with courses organized in a table view, best for long-term planning or brainstorming,.&lt;/li&gt;
+&lt;li&gt;An optional &lt;strong&gt;course schedule&lt;/strong&gt; page with courses organized in a board view, best for sorting by semester/quarter/etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Class notes&lt;/strong&gt; for every course.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-how-to-use&#34;&gt;💡 How To Use&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-course&#34;&gt;Create a new course&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the little arrow next to the blue &lt;code&gt;New&lt;/code&gt; button in the &lt;strong&gt;Courses&lt;/strong&gt; section and select the &lt;code&gt;⭐ New Subject&lt;/code&gt; template.&lt;/li&gt;
+&lt;li&gt;Now you can fill out the course information under the properties at the top, add a header, change the icon, etc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(The above method also works if you&amp;rsquo;re in the Academic Plan or Course Schedule page.)&lt;/p&gt;
+&lt;h3 id=&#34;start-keeping-track-of-assignments&#34;&gt;Start keeping track of assignments&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Scroll down to the &lt;strong&gt;Assignments&lt;/strong&gt; calendar and click on the &lt;code&gt;+&lt;/code&gt; button on the day the assignment is due.&lt;/li&gt;
+&lt;li&gt;Under the &lt;code&gt;Course&lt;/code&gt; property on the assignment&amp;rsquo;s page, create a new option for your new course (you can change the color to match that of the course option you set above).&lt;/li&gt;
+&lt;li&gt;Now navigate back to the dashboard and click on your new course.&lt;/li&gt;
+&lt;li&gt;Under the &lt;strong&gt;Assignments&lt;/strong&gt; section, click on &lt;code&gt;Filter&lt;/code&gt; and select the course (&amp;ldquo;Where Course is [course]&amp;rdquo;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(Still trying to figure out how to link the Courses and Assignments databases so that you don&amp;rsquo;t have to create what&amp;rsquo;s essentially the same course option twice, but I haven&amp;rsquo;t figured out a clean way to do it.)&lt;/p&gt;
+&lt;h2 id=&#34;-gallery&#34;&gt;🌟 Gallery&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/overview2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1540&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/overview2_hu0b8b27b2130c082e1f0485c1d3d812be_1693365_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/overview2_hu0b8b27b2130c082e1f0485c1d3d812be_1693365_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;overview&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;299px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/academicplan.png&#34;
+	width=&#34;1439&#34;
+	height=&#34;852&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/academicplan_hu63efac80cbf4a52f0070d72249cca77e_125439_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/academicplan_hu63efac80cbf4a52f0070d72249cca77e_125439_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;academic plan&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;168&#34;
+		data-flex-basis=&#34;405px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/courseschedule.png&#34;
+	width=&#34;1668&#34;
+	height=&#34;922&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/courseschedule_hu7dcb1baa3e39ca18a240f8b1575726d2_94325_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/courseschedule_hu7dcb1baa3e39ca18a240f8b1575726d2_94325_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;course schedule&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;434px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/coursepage2.png&#34;
+	width=&#34;1568&#34;
+	height=&#34;1490&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/coursepage2_hu4e42fca651b885511b26fdcd9166a2a6_1064289_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/coursepage2_hu4e42fca651b885511b26fdcd9166a2a6_1064289_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;course page&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;252px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

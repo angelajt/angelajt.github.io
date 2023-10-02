@@ -1,22 +1,261 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Docs on Angela&#39;s Blog</title>
-    <link>/docs/</link>
-    <description>Recent content in Docs on Angela&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy; 2021 Angela Traugott 
+    <channel>
+        <title>Docs on Angela&#39;s Blog</title>
+        <link>https://angelajt.com/docs/</link>
+        <description>Recent content in Docs on Angela&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>&amp;copy; 2021 Angela Traugott 
 </copyright>
-    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>picoGym Writeups</title>
-      <link>/docs/picogym/</link>
-      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/picogym/</guid>
-      <description>Writeups for picoCTF&amp;rsquo;s practice competition.</description>
-    </item>
-    
-  </channel>
+        <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://angelajt.com/docs/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>picoGym Writeups</title>
+        <link>https://angelajt.com/docs/picogym/</link>
+        <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/docs/picogym/</guid>
+        <description>&lt;h2 id=&#34;general-information&#34;&gt;General Information&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://picoctf.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;picoCTF&lt;/a&gt; is a beginner-level competition where you can learn some basics about cybersecurity by completing small challenges about a variety of topics like cryptography, web exploitation, reverse engineering, and so on. I totally recommend this competition for anyone looking to go into cybersecurity — or, if you&amp;rsquo;re like me, just up for an interesting and fun challenge.&lt;/p&gt;
+&lt;p&gt;The 2021 competition is officially starting on March 16, but there are &lt;a class=&#34;link&#34; href=&#34;https://play.picoctf.org/practice&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;a number of practice challenges&lt;/a&gt; from previous years that you can work on anytime to help sharpen your skills. The writeups here will be walk-throughs for those challenges, organized by category. I&amp;rsquo;ll continue to update this page as I solve more.&lt;/p&gt;
+&lt;p&gt;Flags (the final solutions for the challenges) are submitted in the format &lt;code&gt;picoCTF{FLAG}&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;reverse-engineering&#34;&gt;Reverse Engineering&lt;/h2&gt;
+&lt;h3 id=&#34;vault-door-training&#34;&gt;vault-door-training&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Your mission is to enter Dr. Evil&amp;rsquo;s laboratory and retrieve the blueprints for his Doomsday Project. The laboratory is protected by a series of locked vault doors. Each door is controlled by a computer and requires a password to open. Unfortunately, our undercover agents have not been able to obtain the secret passwords for the vault doors, but one of our junior agents obtained the source code for each vault&amp;rsquo;s computer! You will need to read the source code for each level to figure out what the password is for that vault door. As a warmup, we have created a replica vault in our training facility. The source code for the training vault is here: &lt;code&gt;[VaultDoorTraining.java]&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;solution&#34;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;Most challenge descriptions usually give you some subtle hints on how to solve the challenge, but in this case the solution is straightforward enough that the description is mostly just for storytelling purposes. 😛&lt;/p&gt;
+&lt;p&gt;The first thing I did for this challenge was to look at the code in the file:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/vault-door-training.png&#34;
+	width=&#34;807&#34;
+	height=&#34;486&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/vault-door-training_hu9d093109566a204421cf251852308584_75988_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/vault-door-training_hu9d093109566a204421cf251852308584_75988_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;vault-door-training.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;398px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s a &lt;em&gt;lot&lt;/em&gt; going on here, but the big glaring thing here is that &lt;strong&gt;the entire password is stored in plaintext&lt;/strong&gt; at the bottom of the file. This is obviously a no-no if you&amp;rsquo;re trying to hide this information from someone who might have access to your source code!&lt;/p&gt;
+&lt;h4 id=&#34;flag&#34;&gt;Flag&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;picoCTF{w4rm1ng_Up_w1tH_jAv4_eec0716b713}&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;vault-door-1&#34;&gt;vault-door-1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This vault uses some complicated arrays! I hope you can make sense of it, special agent. The source code for this vault is here: &lt;code&gt;[VaultDoor1.java]&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;solution-1&#34;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/vault-door-1.png&#34;
+	width=&#34;745&#34;
+	height=&#34;707&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/vault-door-1_huac403281010bff2c8be218c17a488b7c_138579_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/vault-door-1_huac403281010bff2c8be218c17a488b7c_138579_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;vault-door-1.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;252px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The code that checks the password in this file is a bit more complicated, but this challenge is still pretty straightforward! You don&amp;rsquo;t even really need to be familiar with Java (I definitely am not) to understand what to do.&lt;/p&gt;
+&lt;p&gt;Since most programming languages tend to count the first item in a sequence as the &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Zero-based_numbering&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;zero&amp;quot;th item&lt;/a&gt;, &lt;code&gt;password.charAt(0)  == &#39;d&#39;&lt;/code&gt; probably means that the first character in the password is the letter &lt;code&gt;d&lt;/code&gt;. That means the second character is the number &lt;code&gt;3&lt;/code&gt;, since &lt;code&gt;password.charAt(1)  == &#39;3&#39;&lt;/code&gt;. So the goal of this challenge is to unscramble the password by going in order from characters 0 through 31.&lt;/p&gt;
+&lt;p&gt;I was tempted to just do this unscrambling manually, but I decided not to because it sounded super boring and tedious. Instead I decided to write a Python script that would do this unscrambling for me (which turned out to take way longer than a manual unscrambling would have taken&amp;hellip; but at least it wasn&amp;rsquo;t boring!).&lt;/p&gt;
+&lt;p&gt;First, I made a file called &lt;code&gt;vd1.txt&lt;/code&gt; to store the lines that contain the characters in the password:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;password.charAt(0)  == &#39;d&#39; &amp;amp;&amp;amp;
+password.charAt(29) == &#39;3&#39; &amp;amp;&amp;amp;
+password.charAt(4)  == &#39;r&#39; &amp;amp;&amp;amp;
+password.charAt(2)  == &#39;5&#39; &amp;amp;&amp;amp;
+password.charAt(23) == &#39;r&#39; &amp;amp;&amp;amp;
+password.charAt(3)  == &#39;c&#39; &amp;amp;&amp;amp;
+password.charAt(17) == &#39;4&#39; &amp;amp;&amp;amp;
+password.charAt(1)  == &#39;3&#39; &amp;amp;&amp;amp;
+password.charAt(7)  == &#39;b&#39; &amp;amp;&amp;amp;
+password.charAt(10) == &#39;_&#39; &amp;amp;&amp;amp;
+password.charAt(5)  == &#39;4&#39; &amp;amp;&amp;amp;
+password.charAt(9)  == &#39;3&#39; &amp;amp;&amp;amp;
+password.charAt(11) == &#39;t&#39; &amp;amp;&amp;amp;
+password.charAt(15) == &#39;c&#39; &amp;amp;&amp;amp;
+password.charAt(8)  == &#39;l&#39; &amp;amp;&amp;amp;
+password.charAt(12) == &#39;H&#39; &amp;amp;&amp;amp;
+password.charAt(20) == &#39;c&#39; &amp;amp;&amp;amp;
+password.charAt(14) == &#39;_&#39; &amp;amp;&amp;amp;
+password.charAt(6)  == &#39;m&#39; &amp;amp;&amp;amp;
+password.charAt(24) == &#39;5&#39; &amp;amp;&amp;amp;
+password.charAt(18) == &#39;r&#39; &amp;amp;&amp;amp;
+password.charAt(13) == &#39;3&#39; &amp;amp;&amp;amp;
+password.charAt(19) == &#39;4&#39; &amp;amp;&amp;amp;
+password.charAt(21) == &#39;T&#39; &amp;amp;&amp;amp;
+password.charAt(16) == &#39;H&#39; &amp;amp;&amp;amp;
+password.charAt(27) == &#39;f&#39; &amp;amp;&amp;amp;
+password.charAt(30) == &#39;b&#39; &amp;amp;&amp;amp;
+password.charAt(25) == &#39;_&#39; &amp;amp;&amp;amp;
+password.charAt(22) == &#39;3&#39; &amp;amp;&amp;amp;
+password.charAt(28) == &#39;6&#39; &amp;amp;&amp;amp;
+password.charAt(26) == &#39;f&#39; &amp;amp;&amp;amp;
+password.charAt(31) == &#39;0&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, I wrote a Python script called &lt;code&gt;vd1solution.py&lt;/code&gt;, that reads the lines from &lt;code&gt;vd1.txt&lt;/code&gt; and sorts them in the correct order, then uses &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Regular_expression&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;regular expressions&lt;/a&gt; (regex) to single out each character of the flag.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# regex
+import re
+# natural sorting
+from natsort import natsorted
+
+# open the file with the lines we want to sort
+file = open(&amp;quot;vd1.txt&amp;quot;, &amp;quot;r&amp;quot;)
+
+# store the file in a variable
+lines = file.read()
+
+# store the lines as a list of strings
+linelist = lines.splitlines()
+
+# sort the list in numerical order
+sortedlines = natsorted(linelist)
+
+# make an empty list for the characters in the flag
+flag = []
+
+# find all characters in sortedlines that are 
+# inside quotes (using regex), and append them to 
+# the list of characters in the flag
+for l in sortedlines:
+    character = re.search(r&amp;quot;\w(?=&#39;)&amp;quot;, l)
+    flag.append(character.group())
+
+# print the flag as a string
+print(&amp;quot;&amp;quot;.join(flag))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;One obstacle I bumped into was the fact that the numbers in the parentheses aren&amp;rsquo;t very easy to sort because the single-digit numbers don&amp;rsquo;t start with &lt;code&gt;0&lt;/code&gt;. This means the normal sorting function (&lt;code&gt;sort()&lt;/code&gt;) would put numbers &lt;code&gt;10&lt;/code&gt;-&lt;code&gt;19&lt;/code&gt; before &lt;code&gt;2&lt;/code&gt;, because the sorting function first looks at the first digit, &lt;code&gt;1&lt;/code&gt;, which comes before &lt;code&gt;2&lt;/code&gt;. Instead, I needed to use &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Natural_sort_order&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;natural sorting&lt;/a&gt;, which treats multi-digit numbers as a single number.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ python3 vd1solution.py
+d35cr4mbl3_tH3_cH4r4cT3r5_ff63b0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;flag-1&#34;&gt;Flag&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;picoCTF{d35cr4mbl3_tH3_cH4r4cT3r5_ff63b0}&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;general-skills&#34;&gt;General Skills&lt;/h2&gt;
+&lt;h3 id=&#34;warmed-up&#34;&gt;Warmed Up&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What is 0x3D (base 16) in decimal (base 10)?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;solution-2&#34;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Hexadecimal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hexadecimal&lt;/a&gt; is a numbering system much like the one we use in our everyday lives, except instead of base 10 (where the highest single digit is 9) it&amp;rsquo;s base 16 (where the highest single digit is F).&lt;/p&gt;
+&lt;p&gt;While &lt;a class=&#34;link&#34; href=&#34;https://owlcation.com/stem/Convert-Hex-to-Decimal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;there is a way to manually convert&lt;/a&gt; from hex (base 16) to decimal (base 10), it&amp;rsquo;s really a lot easier to just use a tool that can convert it for you:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/warmed-up.png&#34;
+	width=&#34;717&#34;
+	height=&#34;495&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/warmed-up_huaae437ca0400cfa2b8fba6038d2426f8_35116_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/warmed-up_huaae437ca0400cfa2b8fba6038d2426f8_35116_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;warmed-up.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;flag-2&#34;&gt;Flag&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;picoCTF{61}&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2warm&#34;&gt;2Warm&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Can you convert the number 42 (base 10) to binary (base 2)?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;solution-3&#34;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Binary_number&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Binary&lt;/a&gt; is another numbering system where there are only two possible digits: 0 and 1. Manual conversions from binary to decimal (and vice versa) are much more straightforward than conversions in hex.&lt;/p&gt;
+&lt;p&gt;I did this problem pretty quickly in my head, but &lt;a class=&#34;link&#34; href=&#34;https://www.khanacademy.org/math/algebra-home/alg-intro-to-algebra/algebra-alternate-number-bases/v/decimal-to-binary&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this helpful KhanAcademy video&lt;/a&gt; explains the process well.&lt;/p&gt;
+&lt;p&gt;32 + 8 + 2 = 42&lt;/p&gt;
+&lt;p&gt;(&lt;strong&gt;1&lt;/strong&gt; * 32) + (&lt;strong&gt;0&lt;/strong&gt; * 16) + (&lt;strong&gt;1&lt;/strong&gt; * 8) + (&lt;strong&gt;0&lt;/strong&gt; * 4) + (&lt;strong&gt;1&lt;/strong&gt; * 2) + (&lt;strong&gt;0&lt;/strong&gt; * 1) = 42&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1 0 1 0 1 0&lt;/strong&gt; = 42&lt;/p&gt;
+&lt;h4 id=&#34;flag-3&#34;&gt;Flag&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;picoCTF{101010}&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;web-exploitation&#34;&gt;Web Exploitation&lt;/h2&gt;
+&lt;h3 id=&#34;insp3ct0r&#34;&gt;Insp3ct0r&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Kishor Balan tipped us off that the following code may need inspection: &lt;code&gt;https://jupiter.challenges.picoctf.org/problem/41511/&lt;/code&gt; or &lt;code&gt;http://jupiter.challenges.picoctf.org:41511&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;solution-4&#34;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;The description for this challenge basically tells you what you need to do right off the bat.&lt;/p&gt;
+&lt;p&gt;I visited the URL in the description and it brought me to this rather nondescript webpage:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/insp3ct0r-site.png&#34;
+	width=&#34;951&#34;
+	height=&#34;360&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/insp3ct0r-site_hu9fe1b5da528faf214c7a0182b9b1afef_12019_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/insp3ct0r-site_hu9fe1b5da528faf214c7a0182b9b1afef_12019_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;insp3ct0r-site.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;264&#34;
+		data-flex-basis=&#34;634px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;There was some useful information under the &amp;ldquo;How&amp;rdquo; tab about the languages this person used to make the site (HTML, CSS, and Javascript). These are the typical languages you&amp;rsquo;ll find that make up most modern-day websites.&lt;/p&gt;
+&lt;p&gt;Chrome has a developer tools panel useful for debugging and editing a website&amp;rsquo;s source code inside your browser. You can access this by right-clicking a webpage and selecting &amp;ldquo;&lt;strong&gt;Inspect&lt;/strong&gt;&amp;rdquo;, or just using the keyboard shortcut (&lt;code&gt;Ctrl + Shift + I&lt;/code&gt; if you&amp;rsquo;re using Linux).&lt;/p&gt;
+&lt;p&gt;Once I was in the developer console (under the &amp;ldquo;Elements&amp;rdquo; tab), I saw some HTML tags that I expanded to find the first part of the flag:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/insp3ct0r-html.png&#34;
+	width=&#34;604&#34;
+	height=&#34;382&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/insp3ct0r-html_hu73458c6271aeca8f8bf3fb3af48502d0_56181_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/insp3ct0r-html_hu73458c6271aeca8f8bf3fb3af48502d0_56181_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;insp3ct0r-html.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Then I popped on over to the &amp;ldquo;Sources&amp;rdquo; tab to find the files that contained the Javascript and CSS for the website (the HTML was here as well, under &lt;code&gt;(index)&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mycss.css&lt;/code&gt;, written in CSS, had the second part of the flag&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/insp3ct0r-css.png&#34;
+	width=&#34;787&#34;
+	height=&#34;449&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/insp3ct0r-css_hudff1c285594db64f9bb6105213f59d31_69371_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/insp3ct0r-css_hudff1c285594db64f9bb6105213f59d31_69371_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;insp3ct0r-css.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;175&#34;
+		data-flex-basis=&#34;420px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;And &lt;code&gt;myjs.js&lt;/code&gt;, written in (you guessed it) Javascript, had the third part of the flag!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/insp3ct0r-js.png&#34;
+	width=&#34;787&#34;
+	height=&#34;382&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/insp3ct0r-js_hu765861f43b01fd9533fccac483541ec2_80621_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/insp3ct0r-js_hu765861f43b01fd9533fccac483541ec2_80621_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;insp3ct0r-js.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;494px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;flag-4&#34;&gt;Flag&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?832b0699}&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

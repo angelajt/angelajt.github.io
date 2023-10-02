@@ -1,290 +1,202 @@
 <!DOCTYPE html>
-<html lang='en' ><meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
+<html lang="en" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Writeups for picoCTF&amp;rsquo;s practice competition.'>
+<title>picoGym Writeups</title>
 
+<link rel='canonical' href='https://angelajt.com/docs/picogym/'>
 
-<title>picoGym Writeups | Angela&#39;s Blog</title>
+<link rel="stylesheet" href="/scss/style.min.abbd69b2908fdfcd5179898beaafd374514a86538d81639ddd2c58c06ae54e40.css"><meta property='og:title' content='picoGym Writeups'>
+<meta property='og:description' content='Writeups for picoCTF&amp;rsquo;s practice competition.'>
+<meta property='og:url' content='https://angelajt.com/docs/picogym/'>
+<meta property='og:site_name' content='Angela&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Docs' /><meta property='article:tag' content='CTF' /><meta property='article:published_time' content='2021-02-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-02-16T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="picoGym Writeups">
+<meta name="twitter:description" content="Writeups for picoCTF&amp;rsquo;s practice competition.">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
 
-<meta name="generator" content="Hugo Eureka 0.8.0" />
-<link rel="stylesheet" href="/css/eureka.min.css">
-<script defer src="/js/eureka.min.js"></script>
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload"
-  href="https://fonts.googleapis.com/css2?family=Merriweather&family=Trispace&family=Montserrat:wght@700;800;900&family=Lora:wght@400;600;700&family=Trispace&family=Noto+Serif+SC:wght@400;600;700&display=swap"
-  as="style" onload="this.onload=null;this.rel='stylesheet'">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
-   media="print"
-  onload="this.media='all';this.onload=null" crossorigin>
-<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
-   crossorigin></script>
-
-  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
-     crossorigin></script>
-
-<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
-   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
-
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
-   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
-  onload="this.media='all';this.onload=null" crossorigin>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
-  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
-   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    renderMathInElement(document.body, {
-      delimiters: [
-        { left: "$$", right: "$$", display: true },
-        { left: "$", right: "$", display: false },
-        { left: "\\(", right: "\\)", display: false },
-        { left: "\\[", right: "\\]", display: true }
-      ],
-    });
-  });
-</script>
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
-  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
-
-
-<link rel="icon" type="image/png" sizes="32x32" href="/images/icon_hua3d572c67f7cba27ec2fd325b48a6a02_38970_32x32_fill_box_center_2.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hua3d572c67f7cba27ec2fd325b48a6a02_38970_180x180_fill_box_center_2.png">
-
-<meta name="description"
-  content="Writeups for picoCTF&rsquo;s practice competition.">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{
-      "@type": "ListItem",
-      "position": 1 ,
-      "name":"Docs",
-      "item":"/docs/"},{
-      "@type": "ListItem",
-      "position": 2 ,
-      "name":"picoGym Writeups",
-      "item":"/docs/picogym/"}]
-}
-</script>
-
-
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "/docs/picogym/"
-    },
-    "headline": "picoGym Writeups | Angela\u0027s Blog","datePublished": "2021-02-16T00:00:00+00:00",
-    "dateModified": "2021-02-16T00:00:00+00:00",
-    "wordCount":  1313 ,
-    "publisher": {
-        "@type": "Person",
-        "name": "Angela T.",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "/images/icon.png"
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
         }
-        },
-    "description": "Writeups for picoCTF\u0026rsquo;s practice competition."
-}
+    })();
 </script>
-<meta property="og:title" content="picoGym Writeups" />
-
-
-<meta property="og:type" content="article" />
-
-
-<meta property="og:image" content="">
-
-
-<meta property="og:url" content="/docs/picogym/" />
-
-
-
-
-<meta property="og:description" content="Writeups for picoCTF&rsquo;s practice competition." />
-
-
-
-
-<meta property="og:locale" content="en" />
-
-
-
-
-<meta property="og:site_name" content="Angela&#39;s Blog" />
-
-
-
-
-
-
-<meta property="article:published_time" content="2021-02-16T00:00:00&#43;00:00" />
-
-
-<meta property="article:modified_time" content="2021-02-16T00:00:00&#43;00:00" />
-
-
-
-<meta property="article:section" content="docs" />
-
-
-<meta property="article:tag" content="CTF" />
-
-
-
-
-
-
-
-<body class="flex flex-col min-h-screen">
-  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
-    <div class="w-full max-w-screen-xl mx-auto"><script>
-    let storageColorScheme = localStorage.getItem("lightDarkMode")
-    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
-        document.getElementsByTagName('html')[0].classList.add('dark')
-    }
-</script>
-<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
-    <a href="/" class="mr-6 text-primary-text text-xl font-bold">Angela&#39;s Blog</a>
-    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
-        <i class="fas fa-bars"></i>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
     </button>
 
-    <div id="target"
-        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
-        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
-            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
-            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Posts</a>
-            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">Docs</a>
-        </div>
-
-        <div class="flex">
-            <div class="relative pt-4 md:pt-0">
-                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
-                    <i class="fas fa-adjust"></i>
-                </div>
-                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
-                </div>
-                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
-                    id='lightDarkOptions'>
-                    <span class="px-4 py-1 hover:text-eureka" name="Light">Light</span>
-                    <span class="px-4 py-1 hover:text-eureka" name="Dark">Dark</span>
-                    <span class="px-4 py-1 hover:text-eureka" name="Auto">Auto</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
-    </div>
-
-</nav>
-<script>
-    
-    let element = document.getElementById('lightDarkMode')
-    if (storageColorScheme == null || storageColorScheme == 'Auto') {
-        document.addEventListener('DOMContentLoaded', () => {
-            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
-        })
-    } else if (storageColorScheme == "Light") {
-        element.firstElementChild.classList.remove('fa-adjust')
-        element.firstElementChild.setAttribute("data-icon", 'sun')
-        element.firstElementChild.classList.add('fa-sun')
-    } else if (storageColorScheme == "Dark") {
-        element.firstElementChild.classList.remove('fa-adjust')
-        element.firstElementChild.setAttribute("data-icon", 'moon')
-        element.firstElementChild.classList.add('fa-moon')
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        getcolorscheme();
-        switchBurger();
-    });
-</script>
-</div>
-  </header>
-  <main class="flex-grow pt-16">
-    <div class="pl-scrollbar">
-      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
-
-
-<div class="lg:pt-12">
-    <div class="flex flex-col md:flex-row bg-secondary-bg rounded">
-        <div class="md:w-1/4 lg:w-1/5 border-r">
-            <div class="sticky top-16 pt-6">
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
                 
-
-
-
-
-
-<div id="sidebar-title" class="md:hidden mx-4 px-2 pt-4 pb-2 md:border-b text-tertiary-text md:text-primary-text">
-    <span class="font-semibold">Table of Contents</span>
-    <i class="fas fa-caret-right ml-1"></i>
-</div>
-
-<div id="sidebar-toc"
-    class="hidden md:block overflow-y-auto mx-6 md:mx-0 pr-6 pt-2 md:max-h-doc-sidebar bg-primary-bg md:bg-transparent">
-    <div class="flex flex-wrap ml-4 -mr-2 p-2 bg-secondary-bg md:bg-primary-bg rounded">
-        <a class="text-eureka hover:text-eureka"
-            href="/docs/picogym/">picoGym Writeups</a>
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
         
         
-        
-
-
-    </div>
-    
-<ul class="pl-6">
-    
-</ul>
-
-</div>
-
-
-
-            </div>
-
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Angela&#39;s Blog</a></h1>
+            <h2 class="site-description"></h2>
         </div>
-        <div class="w-full md:w-3/4 lg:w-4/5 pb-8 pt-2 md:pt-8">
-            <div class="w-full lg:w-3/4 pl-6 ml-0 mr-auto">
-                <h1 class="font-bold text-3xl text-primary-text">picoGym Writeups</h1>
-                <div class="flex flex-wrap flex-row items-center mt-2 font-mono text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
-        <span>2021-02-16</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>7 min read</span>
-    </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='#about' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>Posts</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/photos/' >
+                
+                
+                
+                <span>Photography</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/docs/' >
+                
+                
+                
+                <span>Docs</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/spotify/' >
+                
+                
+                
+                <span>Spotify</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
     
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/docs/picogym/">picoGym Writeups</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 16, 2021</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
+    </footer>
     
 
     
 </div>
 
-            </div>
-            <div class="flex">
-                <div class="w-full lg:w-3/4 px-6">
-                    
-                    
-                    <div class="content">
-                        <h2 id="general-information">General Information</h2>
-<p><a href="https://picoctf.org/">picoCTF</a> is a beginner-level competition where you can learn some basics about cybersecurity by completing small challenges about a variety of topics like cryptography, web exploitation, reverse engineering, and so on. I totally recommend this competition for anyone looking to go into cybersecurity — or, if you&rsquo;re like me, just up for an interesting and fun challenge.</p>
-<p>The 2021 competition is officially starting on March 16, but there are <a href="https://play.picoctf.org/practice">a number of practice challenges</a> from previous years that you can work on anytime to help sharpen your skills. The writeups here will be walk-throughs for those challenges, organized by category. I&rsquo;ll continue to update this page as I solve more.</p>
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="general-information">General Information</h2>
+<p><a class="link" href="https://picoctf.org/"  target="_blank" rel="noopener"
+    >picoCTF</a> is a beginner-level competition where you can learn some basics about cybersecurity by completing small challenges about a variety of topics like cryptography, web exploitation, reverse engineering, and so on. I totally recommend this competition for anyone looking to go into cybersecurity — or, if you&rsquo;re like me, just up for an interesting and fun challenge.</p>
+<p>The 2021 competition is officially starting on March 16, but there are <a class="link" href="https://play.picoctf.org/practice"  target="_blank" rel="noopener"
+    >a number of practice challenges</a> from previous years that you can work on anytime to help sharpen your skills. The writeups here will be walk-throughs for those challenges, organized by category. I&rsquo;ll continue to update this page as I solve more.</p>
 <p>Flags (the final solutions for the challenges) are submitted in the format <code>picoCTF{FLAG}</code>.</p>
 <h2 id="reverse-engineering">Reverse Engineering</h2>
 <h3 id="vault-door-training">vault-door-training</h3>
@@ -294,7 +206,20 @@
 <h4 id="solution">Solution</h4>
 <p>Most challenge descriptions usually give you some subtle hints on how to solve the challenge, but in this case the solution is straightforward enough that the description is mostly just for storytelling purposes. 😛</p>
 <p>The first thing I did for this challenge was to look at the code in the file:</p>
-<p><img src="vault-door-training.png" alt="vault-door-training.png"></p>
+<p><img src="/docs/picogym/vault-door-training.png"
+	width="807"
+	height="486"
+	srcset="/docs/picogym/vault-door-training_hu9d093109566a204421cf251852308584_75988_480x0_resize_box_3.png 480w, /docs/picogym/vault-door-training_hu9d093109566a204421cf251852308584_75988_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="vault-door-training.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="398px"
+	
+></p>
 <p>There&rsquo;s a <em>lot</em> going on here, but the big glaring thing here is that <strong>the entire password is stored in plaintext</strong> at the bottom of the file. This is obviously a no-no if you&rsquo;re trying to hide this information from someone who might have access to your source code!</p>
 <h4 id="flag">Flag</h4>
 <p><code>picoCTF{w4rm1ng_Up_w1tH_jAv4_eec0716b713}</code></p>
@@ -304,9 +229,23 @@
 <p>This vault uses some complicated arrays! I hope you can make sense of it, special agent. The source code for this vault is here: <code>[VaultDoor1.java]</code></p>
 </blockquote>
 <h4 id="solution-1">Solution</h4>
-<p><img src="vault-door-1.png" alt="vault-door-1.png"></p>
+<p><img src="/docs/picogym/vault-door-1.png"
+	width="745"
+	height="707"
+	srcset="/docs/picogym/vault-door-1_huac403281010bff2c8be218c17a488b7c_138579_480x0_resize_box_3.png 480w, /docs/picogym/vault-door-1_huac403281010bff2c8be218c17a488b7c_138579_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="vault-door-1.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="105"
+		data-flex-basis="252px"
+	
+></p>
 <p>The code that checks the password in this file is a bit more complicated, but this challenge is still pretty straightforward! You don&rsquo;t even really need to be familiar with Java (I definitely am not) to understand what to do.</p>
-<p>Since most programming languages tend to count the first item in a sequence as the <a href="https://en.wikipedia.org/wiki/Zero-based_numbering">&ldquo;zero&quot;th item</a>, <code>password.charAt(0)  == 'd'</code> probably means that the first character in the password is the letter <code>d</code>. That means the second character is the number <code>3</code>, since <code>password.charAt(1)  == '3'</code>. So the goal of this challenge is to unscramble the password by going in order from characters 0 through 31.</p>
+<p>Since most programming languages tend to count the first item in a sequence as the <a class="link" href="https://en.wikipedia.org/wiki/Zero-based_numbering"  target="_blank" rel="noopener"
+    >&ldquo;zero&quot;th item</a>, <code>password.charAt(0)  == 'd'</code> probably means that the first character in the password is the letter <code>d</code>. That means the second character is the number <code>3</code>, since <code>password.charAt(1)  == '3'</code>. So the goal of this challenge is to unscramble the password by going in order from characters 0 through 31.</p>
 <p>I was tempted to just do this unscrambling manually, but I decided not to because it sounded super boring and tedious. Instead I decided to write a Python script that would do this unscrambling for me (which turned out to take way longer than a manual unscrambling would have taken&hellip; but at least it wasn&rsquo;t boring!).</p>
 <p>First, I made a file called <code>vd1.txt</code> to store the lines that contain the characters in the password:</p>
 <pre><code>password.charAt(0)  == 'd' &amp;&amp;
@@ -342,7 +281,8 @@ password.charAt(28) == '6' &amp;&amp;
 password.charAt(26) == 'f' &amp;&amp;
 password.charAt(31) == '0'
 </code></pre>
-<p>Then, I wrote a Python script called <code>vd1solution.py</code>, that reads the lines from <code>vd1.txt</code> and sorts them in the correct order, then uses <a href="https://en.wikipedia.org/wiki/Regular_expression">regular expressions</a> (regex) to single out each character of the flag.</p>
+<p>Then, I wrote a Python script called <code>vd1solution.py</code>, that reads the lines from <code>vd1.txt</code> and sorts them in the correct order, then uses <a class="link" href="https://en.wikipedia.org/wiki/Regular_expression"  target="_blank" rel="noopener"
+    >regular expressions</a> (regex) to single out each character of the flag.</p>
 <pre><code class="language-python"># regex
 import re
 # natural sorting
@@ -373,7 +313,8 @@ for l in sortedlines:
 # print the flag as a string
 print(&quot;&quot;.join(flag))
 </code></pre>
-<p>One obstacle I bumped into was the fact that the numbers in the parentheses aren&rsquo;t very easy to sort because the single-digit numbers don&rsquo;t start with <code>0</code>. This means the normal sorting function (<code>sort()</code>) would put numbers <code>10</code>-<code>19</code> before <code>2</code>, because the sorting function first looks at the first digit, <code>1</code>, which comes before <code>2</code>. Instead, I needed to use <a href="https://en.wikipedia.org/wiki/Natural_sort_order">natural sorting</a>, which treats multi-digit numbers as a single number.</p>
+<p>One obstacle I bumped into was the fact that the numbers in the parentheses aren&rsquo;t very easy to sort because the single-digit numbers don&rsquo;t start with <code>0</code>. This means the normal sorting function (<code>sort()</code>) would put numbers <code>10</code>-<code>19</code> before <code>2</code>, because the sorting function first looks at the first digit, <code>1</code>, which comes before <code>2</code>. Instead, I needed to use <a class="link" href="https://en.wikipedia.org/wiki/Natural_sort_order"  target="_blank" rel="noopener"
+    >natural sorting</a>, which treats multi-digit numbers as a single number.</p>
 <pre><code class="language-bash">$ python3 vd1solution.py
 d35cr4mbl3_tH3_cH4r4cT3r5_ff63b0
 </code></pre>
@@ -385,9 +326,24 @@ d35cr4mbl3_tH3_cH4r4cT3r5_ff63b0
 <p>What is 0x3D (base 16) in decimal (base 10)?</p>
 </blockquote>
 <h4 id="solution-2">Solution</h4>
-<p><a href="https://en.wikipedia.org/wiki/Hexadecimal">Hexadecimal</a> is a numbering system much like the one we use in our everyday lives, except instead of base 10 (where the highest single digit is 9) it&rsquo;s base 16 (where the highest single digit is F).</p>
-<p>While <a href="https://owlcation.com/stem/Convert-Hex-to-Decimal">there is a way to manually convert</a> from hex (base 16) to decimal (base 10), it&rsquo;s really a lot easier to just use a tool that can convert it for you:</p>
-<p><img src="warmed-up.png" alt="warmed-up.png"></p>
+<p><a class="link" href="https://en.wikipedia.org/wiki/Hexadecimal"  target="_blank" rel="noopener"
+    >Hexadecimal</a> is a numbering system much like the one we use in our everyday lives, except instead of base 10 (where the highest single digit is 9) it&rsquo;s base 16 (where the highest single digit is F).</p>
+<p>While <a class="link" href="https://owlcation.com/stem/Convert-Hex-to-Decimal"  target="_blank" rel="noopener"
+    >there is a way to manually convert</a> from hex (base 16) to decimal (base 10), it&rsquo;s really a lot easier to just use a tool that can convert it for you:</p>
+<p><img src="/docs/picogym/warmed-up.png"
+	width="717"
+	height="495"
+	srcset="/docs/picogym/warmed-up_huaae437ca0400cfa2b8fba6038d2426f8_35116_480x0_resize_box_3.png 480w, /docs/picogym/warmed-up_huaae437ca0400cfa2b8fba6038d2426f8_35116_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="warmed-up.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="144"
+		data-flex-basis="347px"
+	
+></p>
 <h4 id="flag-2">Flag</h4>
 <p><code>picoCTF{61}</code></p>
 <h3 id="2warm">2Warm</h3>
@@ -395,8 +351,10 @@ d35cr4mbl3_tH3_cH4r4cT3r5_ff63b0
 <p>Can you convert the number 42 (base 10) to binary (base 2)?</p>
 </blockquote>
 <h4 id="solution-3">Solution</h4>
-<p><a href="https://en.wikipedia.org/wiki/Binary_number">Binary</a> is another numbering system where there are only two possible digits: 0 and 1. Manual conversions from binary to decimal (and vice versa) are much more straightforward than conversions in hex.</p>
-<p>I did this problem pretty quickly in my head, but <a href="https://www.khanacademy.org/math/algebra-home/alg-intro-to-algebra/algebra-alternate-number-bases/v/decimal-to-binary">this helpful KhanAcademy video</a> explains the process well.</p>
+<p><a class="link" href="https://en.wikipedia.org/wiki/Binary_number"  target="_blank" rel="noopener"
+    >Binary</a> is another numbering system where there are only two possible digits: 0 and 1. Manual conversions from binary to decimal (and vice versa) are much more straightforward than conversions in hex.</p>
+<p>I did this problem pretty quickly in my head, but <a class="link" href="https://www.khanacademy.org/math/algebra-home/alg-intro-to-algebra/algebra-alternate-number-bases/v/decimal-to-binary"  target="_blank" rel="noopener"
+    >this helpful KhanAcademy video</a> explains the process well.</p>
 <p>32 + 8 + 2 = 42</p>
 <p>(<strong>1</strong> * 32) + (<strong>0</strong> * 16) + (<strong>1</strong> * 8) + (<strong>0</strong> * 4) + (<strong>1</strong> * 2) + (<strong>0</strong> * 1) = 42</p>
 <p><strong>1 0 1 0 1 0</strong> = 42</p>
@@ -410,125 +368,209 @@ d35cr4mbl3_tH3_cH4r4cT3r5_ff63b0
 <h4 id="solution-4">Solution</h4>
 <p>The description for this challenge basically tells you what you need to do right off the bat.</p>
 <p>I visited the URL in the description and it brought me to this rather nondescript webpage:</p>
-<p><img src="insp3ct0r-site.png" alt="insp3ct0r-site.png"></p>
+<p><img src="/docs/picogym/insp3ct0r-site.png"
+	width="951"
+	height="360"
+	srcset="/docs/picogym/insp3ct0r-site_hu9fe1b5da528faf214c7a0182b9b1afef_12019_480x0_resize_box_3.png 480w, /docs/picogym/insp3ct0r-site_hu9fe1b5da528faf214c7a0182b9b1afef_12019_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="insp3ct0r-site.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="264"
+		data-flex-basis="634px"
+	
+></p>
 <p>There was some useful information under the &ldquo;How&rdquo; tab about the languages this person used to make the site (HTML, CSS, and Javascript). These are the typical languages you&rsquo;ll find that make up most modern-day websites.</p>
 <p>Chrome has a developer tools panel useful for debugging and editing a website&rsquo;s source code inside your browser. You can access this by right-clicking a webpage and selecting &ldquo;<strong>Inspect</strong>&rdquo;, or just using the keyboard shortcut (<code>Ctrl + Shift + I</code> if you&rsquo;re using Linux).</p>
 <p>Once I was in the developer console (under the &ldquo;Elements&rdquo; tab), I saw some HTML tags that I expanded to find the first part of the flag:</p>
-<p><img src="insp3ct0r-html.png" alt="insp3ct0r-html.png"></p>
+<p><img src="/docs/picogym/insp3ct0r-html.png"
+	width="604"
+	height="382"
+	srcset="/docs/picogym/insp3ct0r-html_hu73458c6271aeca8f8bf3fb3af48502d0_56181_480x0_resize_box_3.png 480w, /docs/picogym/insp3ct0r-html_hu73458c6271aeca8f8bf3fb3af48502d0_56181_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="insp3ct0r-html.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="158"
+		data-flex-basis="379px"
+	
+></p>
 <p>Then I popped on over to the &ldquo;Sources&rdquo; tab to find the files that contained the Javascript and CSS for the website (the HTML was here as well, under <code>(index)</code>).</p>
 <p><code>mycss.css</code>, written in CSS, had the second part of the flag&hellip;</p>
-<p><img src="insp3ct0r-css.png" alt="insp3ct0r-css.png"></p>
+<p><img src="/docs/picogym/insp3ct0r-css.png"
+	width="787"
+	height="449"
+	srcset="/docs/picogym/insp3ct0r-css_hudff1c285594db64f9bb6105213f59d31_69371_480x0_resize_box_3.png 480w, /docs/picogym/insp3ct0r-css_hudff1c285594db64f9bb6105213f59d31_69371_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="insp3ct0r-css.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="175"
+		data-flex-basis="420px"
+	
+></p>
 <p>And <code>myjs.js</code>, written in (you guessed it) Javascript, had the third part of the flag!</p>
-<p><img src="insp3ct0r-js.png" alt="insp3ct0r-js.png"></p>
+<p><img src="/docs/picogym/insp3ct0r-js.png"
+	width="787"
+	height="382"
+	srcset="/docs/picogym/insp3ct0r-js_hu765861f43b01fd9533fccac483541ec2_80621_480x0_resize_box_3.png 480w, /docs/picogym/insp3ct0r-js_hu765861f43b01fd9533fccac483541ec2_80621_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="insp3ct0r-js.png"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="206"
+		data-flex-basis="494px"
+	
+></p>
 <h4 id="flag-4">Flag</h4>
 <p><code>picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?832b0699}</code></p>
 
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ctf/">CTF</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 &amp;copy; 2021 Angela Traugott 
+
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
                     </div>
-                    
-                    <div class="my-4">
-    
-    <a href="/tags/ctf/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#CTF</a>
-    
-</div>
-                    
-                    
-
-                    
-
-
-
-                    
-                    
-
-
-
-  <script id="utterances" src="https://utteranc.es/client.js"
-            issue-term=og:title
-            repo=angelajt/blog
-              theme=preferred-color-scheme
-        crossorigin="anonymous"
-        async>
-</script>
-<script>
-    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
-      document.getElementById('utterances').setAttribute('theme', 'github-dark')
-    }
-</script>
-
                 </div>
-                
-                <div class="hidden lg:block lg:w-1/4">
-                    
-                    <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-secondary-bg pt-16 -mt-16 ">
-    <span class="text-lg font-sans font-semibold">On This Page</span>
-</div>
-<div class="sticky-toc hidden lg:block px-6 pb-6  pt-10 -mt-10 border-l ">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#general-information">General Information</a></li>
-    <li><a href="#reverse-engineering">Reverse Engineering</a>
-      <ul>
-        <li><a href="#vault-door-training">vault-door-training</a></li>
-        <li><a href="#vault-door-1">vault-door-1</a></li>
-      </ul>
-    </li>
-    <li><a href="#general-skills">General Skills</a>
-      <ul>
-        <li><a href="#warmed-up">Warmed Up</a></li>
-        <li><a href="#2warm">2Warm</a></li>
-      </ul>
-    </li>
-    <li><a href="#web-exploitation">Web Exploitation</a>
-      <ul>
-        <li><a href="#insp3ct0r">Insp3ct0r</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-</div>
-<script>
-    window.addEventListener('DOMContentLoaded', () => {
-        enableStickyToc();
-    });
-</script>
+            </div>
 
-                    
-                </div>
-                
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
             </div>
 
         </div>
 
-
     </div>
-</div>
 
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        hljs.initHighlightingOnLoad();
-        changeSidebarHeight();
-        switchDocToc();
-    })
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
 </script>
 
-
-
-
-
-
-
-
-
-      </div>
-    </div>
-    
-  </main>
-  <footer class="pl-scrollbar">
-    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
-    <p class="text-sm text-tertiary-text">&copy; 2021 Angela Traugott 
- &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
-</div></div>
-  </footer>
-</body>
-
+    </body>
 </html>

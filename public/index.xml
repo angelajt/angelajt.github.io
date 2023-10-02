@@ -1,49 +1,797 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Angela&#39;s Blog</title>
-    <link>/</link>
-    <description>Recent content on Angela&#39;s Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <copyright>&amp;copy; 2021 Angela Traugott 
+    <channel>
+        <title>Angela&#39;s Blog</title>
+        <link>https://angelajt.com/</link>
+        <description>Recent content on Angela&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>&amp;copy; 2021 Angela Traugott 
 </copyright>
-    <lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Books I read in March 2021</title>
-      <link>/posts/2021-mar-books/</link>
-      <pubDate>Sun, 04 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2021-mar-books/</guid>
-      <description>Like a lot of people, I was a really avid reader in elementary and early middle school, but my reading sort of just fell off a cliff in middle/high school as I became more and more preoccupied with much more important things, like zoning out in class and collecting half-used pens.</description>
-    </item>
-    
-    <item>
-      <title>Notion school dashboard template</title>
-      <link>/posts/notion-school/</link>
-      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/notion-school/</guid>
-      <description>A simple school dashboard template with a stellar twist!</description>
-    </item>
-    
-    <item>
-      <title>picoGym Writeups</title>
-      <link>/docs/picogym/</link>
-      <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/picogym/</guid>
-      <description>Writeups for picoCTF&amp;rsquo;s practice competition.</description>
-    </item>
-    
-    <item>
-      <title>Welcome to my blog!</title>
-      <link>/posts/firstpost/</link>
-      <pubDate>Tue, 02 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/firstpost/</guid>
-      <description>Hi, I&amp;rsquo;m Angela! This is my new blog where I plan to post about whatever&amp;rsquo;s on my mind, as well as things I&amp;rsquo;m working on.</description>
-    </item>
-    
-  </channel>
+        <lastBuildDate>Sat, 25 Dec 2021 17:35:45 -0800</lastBuildDate><atom:link href="https://angelajt.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>1. Setup</title>
+        <link>https://angelajt.com/docs/lightsensor/setup/</link>
+        <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/docs/lightsensor/setup/</guid>
+        <description>&lt;h2 id=&#34;a-wire-it-all-up&#34;&gt;a. Wire it all up&lt;/h2&gt;
+&lt;p&gt;Plug one end of the STEMMA connector into the BH1750, and the other end into the FeatherS2. Then plug the FeatherS2 into your computer with the USB-C cable.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/wiring.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;wiring&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;b-install-some-libraries&#34;&gt;b. Install some libraries&lt;/h2&gt;
+&lt;p&gt;On your computer, you&amp;rsquo;ll see the FeatherS2 board mounted as a USB drive called &lt;code&gt;CIRCUITPY&lt;/code&gt;. Inside, you&amp;rsquo;ll see a folder called &lt;code&gt;lib&lt;/code&gt;. Unless you&amp;rsquo;ve already installed libraries on your board, the &lt;code&gt;lib&lt;/code&gt; folder should be empty. What you&amp;rsquo;ll want to do is get the BH1750 library into this folder so that you can talk to your BH1750 through code.&lt;/p&gt;
+&lt;p&gt;First, install and unzip the &lt;a class=&#34;link&#34; href=&#34;https://circuitpython.org/libraries&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CircuitPython Library Bundle&lt;/a&gt;. The FeatherS2 comes with CircuitPython 6, so make sure you install Bundle Version 6.x.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/button.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot of the correct download button&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Then look inside the bundle folder and find &lt;code&gt;adafruit_bh1750.mpy&lt;/code&gt; and the &lt;code&gt;adafruit_bus_device&lt;/code&gt; folder. Copy both over to your FeatherS2&amp;rsquo;s &lt;code&gt;lib&lt;/code&gt; folder. &lt;strong&gt;If you&amp;rsquo;re planning to make your light sensor work over WiFi, now would be a good time to copy the folder named &lt;code&gt;adafruit_minimqtt&lt;/code&gt; over to the &lt;code&gt;lib&lt;/code&gt; folder as well.&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>2. Getting measurements through USB</title>
+        <link>https://angelajt.com/docs/lightsensor/usb/</link>
+        <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/docs/lightsensor/usb/</guid>
+        <description>&lt;h2 id=&#34;a-upload-the-code&#34;&gt;a. Upload the code&lt;/h2&gt;
+&lt;p&gt;The code to talk to the light sensor is very simple. Edit &lt;code&gt;code.py&lt;/code&gt; on &lt;code&gt;CIRCUITPY&lt;/code&gt; so that the file contains just these lines (this code was taken from &lt;a class=&#34;link&#34; href=&#34;https://learn.adafruit.com/adafruit-bh1750-ambient-light-sensor/python-circuitpython#example-code-3066441-17&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Adafruit&amp;rsquo;s BH1750 tutorial&lt;/a&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import time
+import board
+import adafruit_bh1750
+
+i2c = board.I2C()
+sensor = adafruit_bh1750.BH1750(i2c)
+
+while True:
+	print(&amp;quot;%.2f Lux&amp;quot; % sensor.lux)
+	time.sleep(1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you&amp;rsquo;d like to measure light in foot-candles instead of lux, use this code (which converts the lux reading to foot-candles):&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import time
+import board
+import adafruit_bh1750
+
+i2c = board.I2C()
+sensor = adafruit_bh1750.BH1750(i2c)
+
+while True:
+	fc = sensor.lux * 0.09290304
+  print(&amp;quot;%.2f footcandles&amp;quot; % fc)
+	time.sleep(1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;b-get-measurements&#34;&gt;b. Get measurements&lt;/h2&gt;
+&lt;p&gt;To see the output from your sensor, you&amp;rsquo;ll need to connect to your FeatherS2&amp;rsquo;s serial console. This is easy if you&amp;rsquo;re using &lt;a class=&#34;link&#34; href=&#34;https://learn.adafruit.com/welcome-to-circuitpython/installing-mu-editor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mu Editor&lt;/a&gt; which is recommended for CircuitPython, but in my case I was having trouble installing it so I followed &lt;a class=&#34;link&#34; href=&#34;https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-mac-and-linux&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;CiruitPython&amp;rsquo;s advanced serial console&lt;/a&gt; instead.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/command.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screen command&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/output.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Light readings&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>3. Getting measurements through WiFi</title>
+        <link>https://angelajt.com/docs/lightsensor/wifi/</link>
+        <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/docs/lightsensor/wifi/</guid>
+        <description>&lt;h2 id=&#34;a-set-up-a-raspberry-pi-with-home-assistant&#34;&gt;a. Set up a Raspberry Pi with Home Assistant&lt;/h2&gt;
+&lt;p&gt;Follow &lt;a class=&#34;link&#34; href=&#34;https://www.home-assistant.io/installation/raspberrypi/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;the Home Assistant installation instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;b-install-mosquitto-broker&#34;&gt;b. Install Mosquitto broker&lt;/h2&gt;
+&lt;p&gt;Follow &lt;a class=&#34;link&#34; href=&#34;https://github.com/home-assistant/addons/blob/master/mosquitto/DOCS.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;the Mosquitto installation instructions&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;c-upload-the-code&#34;&gt;c. Upload the code&lt;/h2&gt;
+&lt;p&gt;Replace the contents of &lt;code&gt;code.py&lt;/code&gt; with the following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import time
+import ssl
+import json
+import alarm
+import socketpool
+import wifi
+import adafruit_minimqtt.adafruit_minimqtt as MQTT
+import board
+import adafruit_bh1750
+
+PUBLISH_DELAY = 5
+MQTT_TOPIC = &amp;quot;state/light-sensor&amp;quot;
+USE_DEEP_SLEEP = False
+
+i2c = board.I2C()
+sensor = adafruit_bh1750.BH1750(i2c)
+
+# Add a secrets.py to your filesystem that has a dictionary called secrets with &amp;quot;ssid&amp;quot; and
+# &amp;quot;password&amp;quot; keys with your WiFi credentials. DO NOT share that file or commit it into Git or other
+# source control.
+# pylint: disable=no-name-in-module,wrong-import-order
+try:
+    from secrets import secrets
+except ImportError:
+    print(&amp;quot;WiFi secrets are kept in secrets.py, please add them there!&amp;quot;)
+    raise
+
+
+wifi.radio.connect(secrets[&amp;quot;ssid&amp;quot;], secrets[&amp;quot;password&amp;quot;])
+print(&amp;quot;Connected to %s!&amp;quot; % secrets[&amp;quot;ssid&amp;quot;])
+
+# Create a socket pool
+pool = socketpool.SocketPool(wifi.radio)
+
+# Set up a MiniMQTT Client
+mqtt_client = MQTT.MQTT(
+    broker=secrets[&amp;quot;mqtt_broker&amp;quot;],
+    port=secrets[&amp;quot;mqtt_port&amp;quot;],
+    username=secrets[&amp;quot;mqtt_username&amp;quot;],
+    password=secrets[&amp;quot;mqtt_password&amp;quot;],
+    socket_pool=pool,
+    ssl_context=ssl.create_default_context(),
+)
+
+print(&amp;quot;Attempting to connect to %s&amp;quot; % mqtt_client.broker)
+mqtt_client.connect()
+
+while True:
+    fc = sensor.lux * 0.09290304
+    print(&amp;quot;%.2f footcandles&amp;quot; % fc)
+    output = {
+        &amp;quot;footcandles&amp;quot;: fc,
+    }
+    mqtt_client.publish(MQTT_TOPIC, json.dumps(output))
+
+    if USE_DEEP_SLEEP:
+        mqtt_client.disconnect()
+        pause = alarm.time.TimeAlarm(monotonic_time=time.monotonic() + PUBLISH_DELAY)
+        alarm.exit_and_deep_sleep_until_alarms(pause)
+    else:
+        last_update = time.monotonic()
+        while time.monotonic() &amp;lt; last_update + PUBLISH_DELAY:
+            mqtt_client.loop()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+        </item>
+        <item>
+        <title>Spotify</title>
+        <link>https://angelajt.com/spotify/</link>
+        <pubDate>Mon, 24 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/spotify/</guid>
+        <description>&lt;p&gt;I listen to a lot of music on Spotify. Here&amp;rsquo;s a cool table of all of my monthly playlists from 2021, using data from Spotify&amp;rsquo;s API.&lt;/p&gt;
+&lt;p&gt;Kudos to my friend &lt;a class=&#34;link&#34; href=&#34;https://www.tdpain.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;AKP&lt;/a&gt; for writing the Python scripts to generate this table! I had to tweak them a bit since some of my playlists cover multiple months, but otherwise everything works great.&lt;/p&gt;
+&lt;table&gt;&lt;tr&gt;&lt;th&gt;Month&lt;/th&gt;
+&lt;th&gt;Total song length&lt;/th&gt;
+&lt;th&gt;Number of songs&lt;/th&gt;
+&lt;th&gt;Average song length&lt;/th&gt;
+&lt;th&gt;Number of unique artists&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#34;https://open.spotify.com/playlist/6sOck9ehOzKBBIrc0TnHT4&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;january &amp; february&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;44.35&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;4.44&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#34;https://open.spotify.com/playlist/5JtBlukYSFeAxbA2ba7N2k&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;march&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;32.16&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;4.02&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#34;https://open.spotify.com/playlist/22KJZ0spSCiPHWog7lmfCe&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;april&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;50.8&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;4.23&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#34;https://open.spotify.com/playlist/6qr3B8vy4qxIYYbKfVMzzk&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;may&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;47.21&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;3.93&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#34;https://open.spotify.com/playlist/2NIuYZJM6zqvDmXuE44uwP&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;june&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;40.89&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;4.09&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#34;https://open.spotify.com/playlist/4nlSTjTyViNBRNcLke7X1j&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;july &amp; august&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;73.53&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;3.68&lt;/td&gt;
+&lt;td&gt;20&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#34;https://open.spotify.com/playlist/5Cs9Z9hKmwza02JMwE28i0&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;september &amp; october&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;122.54&lt;/td&gt;
+&lt;td&gt;34&lt;/td&gt;
+&lt;td&gt;3.6&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#34;https://open.spotify.com/playlist/66M55mDNl8DaxmpTmMorCg&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;november &amp; december&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;146.98&lt;/td&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;3.97&lt;/td&gt;
+&lt;td&gt;31&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;b&gt;Overall&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;&lt;b&gt;558.46&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;&lt;b&gt;143&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;&lt;b&gt;3.91&lt;/b&gt;&lt;/td&gt;
+&lt;td&gt;&lt;b&gt;85&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>2021 Recap</title>
+        <link>https://angelajt.com/posts/2021-recap/2021-recap/</link>
+        <pubDate>Sat, 25 Dec 2021 17:35:45 -0800</pubDate>
+        
+        <guid>https://angelajt.com/posts/2021-recap/2021-recap/</guid>
+        <description>&lt;p&gt;Merry Christmas! 2021 went by so fast that I completely neglected
+this blog for half the year, haha. Here&amp;rsquo;s some stuff I did this
+past year (aside from school, which took up like 150% of my time)!&lt;/p&gt;
+&lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
+&lt;p&gt;My Reading Challenge on Goodreads was to read 30 books. I&amp;rsquo;ve met
+that goal (almost &amp;ndash; I&amp;rsquo;m on my last book right now), although I
+included short stories and smaller booklets in that challenge. A
+list of full-length books I read this year, excluding short
+stories/booklets:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;Trading in Danger&lt;/em&gt; by Elizabeth Moon&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Life on Mars&lt;/em&gt; by Tracy K. Smith&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Marque and Reprisal&lt;/em&gt; by Elizabeth Moon&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Call Down the Hawk&lt;/em&gt; by Maggie Stiefvater&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Raven Boys&lt;/em&gt; by Maggie Stiefvater (reread)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Klara and the Sun&lt;/em&gt; by Kazuo Ishiguro&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;A Brief History of Time&lt;/em&gt; by Stephen Hawking&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;These Violent Delights&lt;/em&gt; by Chloe Gong&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Atomic Habits&lt;/em&gt; by James Clear&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Hobbit&lt;/em&gt; by J.R.R. Tolkien&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Winter Hours&lt;/em&gt; by Mary Oliver&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Swan&lt;/em&gt; by Mary Oliver&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Fellowship of the Ring&lt;/em&gt; by J.R.R. Tolkien&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Upstream&lt;/em&gt; by Mary Oliver&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;How to Be More Tree&lt;/em&gt; by Liz Marvin&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;An American Sunrise&lt;/em&gt; by Joy Harjo&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Two Towers&lt;/em&gt; by J.R.R. Tolkien&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Drinking Coffee Elsewhere&lt;/em&gt; by ZZ Packer&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Howl&amp;rsquo;s Moving Castle&lt;/em&gt; by Diana Wynne Jones&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Fences&lt;/em&gt; by August Wilson&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;The Return of the King&lt;/em&gt; by J.R.R. Tolkien&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Red Bird&lt;/em&gt; by Mary Oliver&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;An American Marriage&lt;/em&gt; by Tayari Jones&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Legendborn&lt;/em&gt; by Tracy Deonn&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Owls and Other Fantasies&lt;/em&gt; by Mary Oliver&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Our Violent Ends&lt;/em&gt; by Chloe Gong (currently reading)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;NANA vol. 1&lt;/em&gt; by Ai Yazawa (currently reading)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;projects&#34;&gt;Projects&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://angelajt.com/posts/notion-school/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Notion School Dashboard Template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/angelajt/bintags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bin Tags&lt;/a&gt;, an order
+tracking system I wrote for my CS Honors Project.&lt;/li&gt;
+&lt;li&gt;DIY Light/Humidity sensor using Adafruit boards, for my plants,
+still a work-in-progress :P (I worked on this a lot during break
+before starting Summer classes).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;other-random-stats&#34;&gt;Other Random Stats&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Birds identified: &lt;code&gt;45&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Number of minutes listening to music on Spotify: &lt;code&gt;27,247&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Number of minutes learning languages on Duolingo: &lt;code&gt;1,356&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>Ancient Deer of the Pleistocene Epoch</title>
+        <link>https://angelajt.com/posts/pleistocene-deer/</link>
+        <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/posts/pleistocene-deer/</guid>
+        <description>&lt;p&gt;&lt;em&gt;(Featured image: An outdated 1910 illustration of the Irish Elk)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The Pleistocene Epoch, also known as the Great Ice Age, was a geologic time period that began 2.6 million years ago and ended 11,700 years ago. It was marked by extensive glaciation and climate change, as well as the emergence of humans. It was the last epoch before our own, the modern-day Holocene.&lt;/p&gt;
+&lt;p&gt;The Pleistocene saw many awe-inspiring megafauna, such as the &lt;a class=&#34;link&#34; href=&#34;https://www.britannica.com/animal/mammoth-extinct-mammal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;mammoth&lt;/a&gt;, the &lt;a class=&#34;link&#34; href=&#34;https://www.britannica.com/animal/woolly-rhinoceros&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;woolly rhinoceros&lt;/a&gt;, and the &lt;a class=&#34;link&#34; href=&#34;https://www.britannica.com/animal/Diprotodon&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;giant wombat&lt;/a&gt;. It also saw many species of giant deer, including what is now considered to be the largest deer that ever existed. Below are a few beautiful and impressive species of Pleistocene deer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/pleistocene-deer/eucladoceros.png&#34;
+	width=&#34;1280&#34;
+	height=&#34;883&#34;
+	srcset=&#34;https://angelajt.com/posts/pleistocene-deer/eucladoceros_hu1e37dce01485c6010b5261f634d8136f_1406358_480x0_resize_box_3.png 480w, https://angelajt.com/posts/pleistocene-deer/eucladoceros_hu1e37dce01485c6010b5261f634d8136f_1406358_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Bush-antlered deer&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;bush-antlered-deer&#34;&gt;Bush-antlered Deer&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Eucladoceros dicranios&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The &lt;strong&gt;bush-antlered deer&lt;/strong&gt;, &lt;em&gt;Eucladoceros&lt;/em&gt;, was one of the earlier forms of deer, having been around during the Pliocene, the epoch preceding the Pleistocene beginning about 4 million years ago. The most iconic species of the genus, &lt;em&gt;Eucladoceros dicranios&lt;/em&gt;, had glorious branching antlers that spanned over 5½ feet wide! (They remind me a bit of the &lt;a class=&#34;link&#34; href=&#34;https://ghibli.fandom.com/wiki/Forest_Spirit&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;deer god from Princess Mononoke&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Eucladoceros&lt;/em&gt; enjoyed warmer climates and inhabited the &lt;a class=&#34;link&#34; href=&#34;http://stsmith.faculty.anth.ucsb.edu/classes/anth3/courseware/Pleistocene/6_Bestiary.html#Eucladoceros&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;middle latitudes of Eurasia&lt;/a&gt;, all the way from the Iberian peninsula to the northern coasts bordering the Sea of Japan. This deer went extinct sometime in the early-to-mid Pleistocene, likely due to cooling climates and loss of vegetation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/pleistocene-deer/cervalces.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;768&#34;
+	srcset=&#34;https://angelajt.com/posts/pleistocene-deer/cervalces_hua4c2a88c16714634cccedda42e53b1a2_1549183_480x0_resize_box_3.png 480w, https://angelajt.com/posts/pleistocene-deer/cervalces_hua4c2a88c16714634cccedda42e53b1a2_1549183_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Stag-moose&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;stag-moose&#34;&gt;Stag-moose&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Cervalces scotti&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Native to North America, the &lt;strong&gt;stag-moose&lt;/strong&gt; had a magestic and complex set of palmate (or &amp;ldquo;webbed&amp;rdquo;) antlers and was slightly larger than the modern-day moose — &lt;em&gt;Alces alces&lt;/em&gt;, the largest currently living deer in the world. &lt;em&gt;Cervalces scotti&lt;/em&gt; was found primarily in the Midwest and some parts of the eastern US, and lived in wetland habitats similar to those of the modern-day moose. The stag-moose went extinct sometime during the transition between the Pleistocene and the Holocene epochs, along with many other species of megafauna during the &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Quaternary_extinction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Quaternary extinction&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/pleistocene-deer/megaloceros.png&#34;
+	width=&#34;1100&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://angelajt.com/posts/pleistocene-deer/megaloceros_hua4a3d1c02507edbd9033e59e8678461c_1352867_480x0_resize_box_3.png 480w, https://angelajt.com/posts/pleistocene-deer/megaloceros_hua4a3d1c02507edbd9033e59e8678461c_1352867_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Irish elk&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;366px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;irish-elk&#34;&gt;Irish Elk&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Megaloceros giganteus&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My favorite (and perhaps the most well-known) Pleistocene deer is the &lt;strong&gt;Irish Elk&lt;/strong&gt;, also known as the &lt;strong&gt;Giant Deer&lt;/strong&gt;. Although this deer lived throughout Europe and Asia, notable well-preserved fossils were found in peat bogs in Ireland, which gave the Irish Elk its name. Like the stag-moose, &lt;em&gt;Megaloceros giganteus&lt;/em&gt; faced extinction after the beginning of the Holocene some 11,000 years ago, although some Irish Elk fossils have been found which may have dated back only 7,000–⁠8,000 years.&lt;/p&gt;
+&lt;p&gt;Although some sources say that &lt;a class=&#34;link&#34; href=&#34;https://ucmp.berkeley.edu/mammal/artio/irishelk.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;the Irish Elk was the largest deer to have ever existed&lt;/a&gt;, other sources say that &lt;a class=&#34;link&#34; href=&#34;https://books.google.com/books?id=bcWZX-IMEVkC&amp;amp;pg=PA122&amp;amp;source=gbs_toc_r&amp;amp;cad=4#v=onepage&amp;amp;q=Cervalces%20latifrons&amp;amp;f=false&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this title may have actually belonged to the &lt;em&gt;much&lt;/em&gt; larger &lt;em&gt;Cervalces latifrons&lt;/em&gt;&lt;/a&gt;, the broad-fronted moose (a relative of the stag-moose). While I&amp;rsquo;m not entirely sure, this disparity might have arisen because the Irish Elk was discovered and catalogued in Europe much earlier than the broad-fronted moose, and is generally more widely known. Nevertheless, the Irish Elk&amp;rsquo;s magestic set of palmated antlers were no doubt the largest of any species of deer, spanning over 12 feet wide!&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;h3 id=&#34;information&#34;&gt;Information&lt;/h3&gt;
+&lt;p&gt;Johnson, W. Hilton. &amp;ldquo;Pleistocene Epoch&amp;rdquo;. Encyclopedia Britannica, 30 Jul. 2018, &lt;a class=&#34;link&#34; href=&#34;https://www.britannica.com/science/Pleistocene-Epoch&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.britannica.com/science/Pleistocene-Epoch&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Freedman, Jan. “The Beast of the Woods.” TwilightBeasts, 12 Oct. 2018, &lt;a class=&#34;link&#34; href=&#34;https://twilightbeasts.org/2018/10/12/the-beast-of-the-woods&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://twilightbeasts.org/2018/10/12/the-beast-of-the-woods&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Michaels, George H., and Brian M. Fagan. “A Pleistocene Bestiary.” Univeristy of California Santa Barbara, 2006, &lt;a class=&#34;link&#34; href=&#34;http://stsmith.faculty.anth.ucsb.edu/classes/anth3/courseware/Pleistocene/6_Bestiary.html#Eucladoceros&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://stsmith.faculty.anth.ucsb.edu/classes/anth3/courseware/Pleistocene/6_Bestiary.html#Eucladoceros&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;“Stag-Moose.” Explore the Ice Age Midwest, Illinois State Museum, 2015, &lt;a class=&#34;link&#34; href=&#34;http://iceage.museum.state.il.us/mammals/stag-moose-0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://iceage.museum.state.il.us/mammals/stag-moose-0&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;“The Case of the Irish Elk.” UC Museum of Paleontology, 1996, &lt;a class=&#34;link&#34; href=&#34;https://ucmp.berkeley.edu/mammal/artio/irishelk.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ucmp.berkeley.edu/mammal/artio/irishelk.html&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Geist, Valerius. Deer of the world: their evolution, behaviour, and ecology. United States, Stackpole Books, 1998.&lt;/p&gt;
+&lt;h3 id=&#34;images&#34;&gt;Images&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Irish Elk (featured)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Doflein, Franz; Hesse, Richard, Public domain, via Wikimedia Commons&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stag-moose&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Dantheman9758 at English Wikipedia, CC BY 3.0 &lt;a class=&#34;link&#34; href=&#34;https://creativecommons.org/licenses/by/3.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://creativecommons.org/licenses/by/3.0&lt;/a&gt;, via Wikimedia Commons&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bush-antlered Deer&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ghedoghedo, CC BY-SA 3.0 &lt;a class=&#34;link&#34; href=&#34;https://creativecommons.org/licenses/by-sa/3.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://creativecommons.org/licenses/by-sa/3.0&lt;/a&gt;, via Wikimedia Commons&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Irish Elk&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ghedoghedo, CC BY-SA 4.0 &lt;a class=&#34;link&#34; href=&#34;https://creativecommons.org/licenses/by-sa/4.0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://creativecommons.org/licenses/by-sa/4.0&lt;/a&gt;, via Wikimedia Commons&lt;/p&gt;
+&lt;p&gt;Pavel.Riha.CB, CC BY-SA 3.0 &lt;a class=&#34;link&#34; href=&#34;http://creativecommons.org/licenses/by-sa/3.0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://creativecommons.org/licenses/by-sa/3.0/&lt;/a&gt;, via Wikimedia Commons&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Notion school dashboard template</title>
+        <link>https://angelajt.com/posts/notion-school/</link>
+        <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/posts/notion-school/</guid>
+        <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.notion.so/School-Dashboard-Template-7c3703592ca54494995773e475ee2599&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;✨ Link to Template&lt;/strong&gt;&lt;/a&gt;
+&lt;em&gt;(Click &amp;ldquo;Duplicate&amp;rdquo; on the top right to get started!)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I started using &lt;a class=&#34;link&#34; href=&#34;https://www.notion.so&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Notion&lt;/a&gt; a little over a year ago to keep track of my academic life, and I&amp;rsquo;ve been in love with it ever since. I really like how versatile yet robust it is — I use it to write notes for my classes (especially for Computer Science, since it supports code blocks), plan out the courses I need for my degree, and keep track of all of my assignments. As someone who&amp;rsquo;s usually terribly disorganized and forgetful, I always love finding new tools and methods to keep my life on track.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/angelajtc/status/1361465004277395456&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;I made a school dashboard with Notion recently&lt;/a&gt;, which organizes everything school-related into one holistic, easy-to-navigate view. This free-to-use template is a slight improvement of the school dashboard I personally use. Space headers can be found in &lt;a class=&#34;link&#34; href=&#34;https://esahubble.org/images/archive/wallpapers/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ESA/Hubble&amp;rsquo;s wallpaper gallery&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Questions? Suggestions?&lt;/strong&gt; Leave a comment down below or contact me on &lt;a class=&#34;link&#34; href=&#34;https://twitter.com/angelajtc&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Twitter&lt;/a&gt;!&lt;/p&gt;
+&lt;h2 id=&#34;-features&#34;&gt;🔑 Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A database to keep track of all of your past, current, and future &lt;strong&gt;courses&lt;/strong&gt; — including prerequisites, meeting times, and more.&lt;/li&gt;
+&lt;li&gt;A database to keep track of your &lt;strong&gt;assignments&lt;/strong&gt; — including course, due dates, and completion status.&lt;/li&gt;
+&lt;li&gt;An optional &lt;strong&gt;academic plan&lt;/strong&gt; page with courses organized in a table view, best for long-term planning or brainstorming,.&lt;/li&gt;
+&lt;li&gt;An optional &lt;strong&gt;course schedule&lt;/strong&gt; page with courses organized in a board view, best for sorting by semester/quarter/etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Class notes&lt;/strong&gt; for every course.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;-how-to-use&#34;&gt;💡 How To Use&lt;/h2&gt;
+&lt;h3 id=&#34;create-a-new-course&#34;&gt;Create a new course&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Click the little arrow next to the blue &lt;code&gt;New&lt;/code&gt; button in the &lt;strong&gt;Courses&lt;/strong&gt; section and select the &lt;code&gt;⭐ New Subject&lt;/code&gt; template.&lt;/li&gt;
+&lt;li&gt;Now you can fill out the course information under the properties at the top, add a header, change the icon, etc&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(The above method also works if you&amp;rsquo;re in the Academic Plan or Course Schedule page.)&lt;/p&gt;
+&lt;h3 id=&#34;start-keeping-track-of-assignments&#34;&gt;Start keeping track of assignments&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Scroll down to the &lt;strong&gt;Assignments&lt;/strong&gt; calendar and click on the &lt;code&gt;+&lt;/code&gt; button on the day the assignment is due.&lt;/li&gt;
+&lt;li&gt;Under the &lt;code&gt;Course&lt;/code&gt; property on the assignment&amp;rsquo;s page, create a new option for your new course (you can change the color to match that of the course option you set above).&lt;/li&gt;
+&lt;li&gt;Now navigate back to the dashboard and click on your new course.&lt;/li&gt;
+&lt;li&gt;Under the &lt;strong&gt;Assignments&lt;/strong&gt; section, click on &lt;code&gt;Filter&lt;/code&gt; and select the course (&amp;ldquo;Where Course is [course]&amp;rdquo;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(Still trying to figure out how to link the Courses and Assignments databases so that you don&amp;rsquo;t have to create what&amp;rsquo;s essentially the same course option twice, but I haven&amp;rsquo;t figured out a clean way to do it.)&lt;/p&gt;
+&lt;h2 id=&#34;-gallery&#34;&gt;🌟 Gallery&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/overview2.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1540&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/overview2_hu0b8b27b2130c082e1f0485c1d3d812be_1693365_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/overview2_hu0b8b27b2130c082e1f0485c1d3d812be_1693365_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;overview&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;124&#34;
+		data-flex-basis=&#34;299px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/academicplan.png&#34;
+	width=&#34;1439&#34;
+	height=&#34;852&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/academicplan_hu63efac80cbf4a52f0070d72249cca77e_125439_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/academicplan_hu63efac80cbf4a52f0070d72249cca77e_125439_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;academic plan&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;168&#34;
+		data-flex-basis=&#34;405px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/courseschedule.png&#34;
+	width=&#34;1668&#34;
+	height=&#34;922&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/courseschedule_hu7dcb1baa3e39ca18a240f8b1575726d2_94325_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/courseschedule_hu7dcb1baa3e39ca18a240f8b1575726d2_94325_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;course schedule&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;434px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/posts/notion-school/coursepage2.png&#34;
+	width=&#34;1568&#34;
+	height=&#34;1490&#34;
+	srcset=&#34;https://angelajt.com/posts/notion-school/coursepage2_hu4e42fca651b885511b26fdcd9166a2a6_1064289_480x0_resize_box_3.png 480w, https://angelajt.com/posts/notion-school/coursepage2_hu4e42fca651b885511b26fdcd9166a2a6_1064289_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;course page&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;252px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>picoGym Writeups</title>
+        <link>https://angelajt.com/docs/picogym/</link>
+        <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/docs/picogym/</guid>
+        <description>&lt;h2 id=&#34;general-information&#34;&gt;General Information&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://picoctf.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;picoCTF&lt;/a&gt; is a beginner-level competition where you can learn some basics about cybersecurity by completing small challenges about a variety of topics like cryptography, web exploitation, reverse engineering, and so on. I totally recommend this competition for anyone looking to go into cybersecurity — or, if you&amp;rsquo;re like me, just up for an interesting and fun challenge.&lt;/p&gt;
+&lt;p&gt;The 2021 competition is officially starting on March 16, but there are &lt;a class=&#34;link&#34; href=&#34;https://play.picoctf.org/practice&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;a number of practice challenges&lt;/a&gt; from previous years that you can work on anytime to help sharpen your skills. The writeups here will be walk-throughs for those challenges, organized by category. I&amp;rsquo;ll continue to update this page as I solve more.&lt;/p&gt;
+&lt;p&gt;Flags (the final solutions for the challenges) are submitted in the format &lt;code&gt;picoCTF{FLAG}&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;reverse-engineering&#34;&gt;Reverse Engineering&lt;/h2&gt;
+&lt;h3 id=&#34;vault-door-training&#34;&gt;vault-door-training&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Your mission is to enter Dr. Evil&amp;rsquo;s laboratory and retrieve the blueprints for his Doomsday Project. The laboratory is protected by a series of locked vault doors. Each door is controlled by a computer and requires a password to open. Unfortunately, our undercover agents have not been able to obtain the secret passwords for the vault doors, but one of our junior agents obtained the source code for each vault&amp;rsquo;s computer! You will need to read the source code for each level to figure out what the password is for that vault door. As a warmup, we have created a replica vault in our training facility. The source code for the training vault is here: &lt;code&gt;[VaultDoorTraining.java]&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;solution&#34;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;Most challenge descriptions usually give you some subtle hints on how to solve the challenge, but in this case the solution is straightforward enough that the description is mostly just for storytelling purposes. 😛&lt;/p&gt;
+&lt;p&gt;The first thing I did for this challenge was to look at the code in the file:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/vault-door-training.png&#34;
+	width=&#34;807&#34;
+	height=&#34;486&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/vault-door-training_hu9d093109566a204421cf251852308584_75988_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/vault-door-training_hu9d093109566a204421cf251852308584_75988_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;vault-door-training.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;398px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s a &lt;em&gt;lot&lt;/em&gt; going on here, but the big glaring thing here is that &lt;strong&gt;the entire password is stored in plaintext&lt;/strong&gt; at the bottom of the file. This is obviously a no-no if you&amp;rsquo;re trying to hide this information from someone who might have access to your source code!&lt;/p&gt;
+&lt;h4 id=&#34;flag&#34;&gt;Flag&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;picoCTF{w4rm1ng_Up_w1tH_jAv4_eec0716b713}&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;vault-door-1&#34;&gt;vault-door-1&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This vault uses some complicated arrays! I hope you can make sense of it, special agent. The source code for this vault is here: &lt;code&gt;[VaultDoor1.java]&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;solution-1&#34;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/vault-door-1.png&#34;
+	width=&#34;745&#34;
+	height=&#34;707&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/vault-door-1_huac403281010bff2c8be218c17a488b7c_138579_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/vault-door-1_huac403281010bff2c8be218c17a488b7c_138579_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;vault-door-1.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;252px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The code that checks the password in this file is a bit more complicated, but this challenge is still pretty straightforward! You don&amp;rsquo;t even really need to be familiar with Java (I definitely am not) to understand what to do.&lt;/p&gt;
+&lt;p&gt;Since most programming languages tend to count the first item in a sequence as the &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Zero-based_numbering&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;zero&amp;quot;th item&lt;/a&gt;, &lt;code&gt;password.charAt(0)  == &#39;d&#39;&lt;/code&gt; probably means that the first character in the password is the letter &lt;code&gt;d&lt;/code&gt;. That means the second character is the number &lt;code&gt;3&lt;/code&gt;, since &lt;code&gt;password.charAt(1)  == &#39;3&#39;&lt;/code&gt;. So the goal of this challenge is to unscramble the password by going in order from characters 0 through 31.&lt;/p&gt;
+&lt;p&gt;I was tempted to just do this unscrambling manually, but I decided not to because it sounded super boring and tedious. Instead I decided to write a Python script that would do this unscrambling for me (which turned out to take way longer than a manual unscrambling would have taken&amp;hellip; but at least it wasn&amp;rsquo;t boring!).&lt;/p&gt;
+&lt;p&gt;First, I made a file called &lt;code&gt;vd1.txt&lt;/code&gt; to store the lines that contain the characters in the password:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;password.charAt(0)  == &#39;d&#39; &amp;amp;&amp;amp;
+password.charAt(29) == &#39;3&#39; &amp;amp;&amp;amp;
+password.charAt(4)  == &#39;r&#39; &amp;amp;&amp;amp;
+password.charAt(2)  == &#39;5&#39; &amp;amp;&amp;amp;
+password.charAt(23) == &#39;r&#39; &amp;amp;&amp;amp;
+password.charAt(3)  == &#39;c&#39; &amp;amp;&amp;amp;
+password.charAt(17) == &#39;4&#39; &amp;amp;&amp;amp;
+password.charAt(1)  == &#39;3&#39; &amp;amp;&amp;amp;
+password.charAt(7)  == &#39;b&#39; &amp;amp;&amp;amp;
+password.charAt(10) == &#39;_&#39; &amp;amp;&amp;amp;
+password.charAt(5)  == &#39;4&#39; &amp;amp;&amp;amp;
+password.charAt(9)  == &#39;3&#39; &amp;amp;&amp;amp;
+password.charAt(11) == &#39;t&#39; &amp;amp;&amp;amp;
+password.charAt(15) == &#39;c&#39; &amp;amp;&amp;amp;
+password.charAt(8)  == &#39;l&#39; &amp;amp;&amp;amp;
+password.charAt(12) == &#39;H&#39; &amp;amp;&amp;amp;
+password.charAt(20) == &#39;c&#39; &amp;amp;&amp;amp;
+password.charAt(14) == &#39;_&#39; &amp;amp;&amp;amp;
+password.charAt(6)  == &#39;m&#39; &amp;amp;&amp;amp;
+password.charAt(24) == &#39;5&#39; &amp;amp;&amp;amp;
+password.charAt(18) == &#39;r&#39; &amp;amp;&amp;amp;
+password.charAt(13) == &#39;3&#39; &amp;amp;&amp;amp;
+password.charAt(19) == &#39;4&#39; &amp;amp;&amp;amp;
+password.charAt(21) == &#39;T&#39; &amp;amp;&amp;amp;
+password.charAt(16) == &#39;H&#39; &amp;amp;&amp;amp;
+password.charAt(27) == &#39;f&#39; &amp;amp;&amp;amp;
+password.charAt(30) == &#39;b&#39; &amp;amp;&amp;amp;
+password.charAt(25) == &#39;_&#39; &amp;amp;&amp;amp;
+password.charAt(22) == &#39;3&#39; &amp;amp;&amp;amp;
+password.charAt(28) == &#39;6&#39; &amp;amp;&amp;amp;
+password.charAt(26) == &#39;f&#39; &amp;amp;&amp;amp;
+password.charAt(31) == &#39;0&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then, I wrote a Python script called &lt;code&gt;vd1solution.py&lt;/code&gt;, that reads the lines from &lt;code&gt;vd1.txt&lt;/code&gt; and sorts them in the correct order, then uses &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Regular_expression&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;regular expressions&lt;/a&gt; (regex) to single out each character of the flag.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# regex
+import re
+# natural sorting
+from natsort import natsorted
+
+# open the file with the lines we want to sort
+file = open(&amp;quot;vd1.txt&amp;quot;, &amp;quot;r&amp;quot;)
+
+# store the file in a variable
+lines = file.read()
+
+# store the lines as a list of strings
+linelist = lines.splitlines()
+
+# sort the list in numerical order
+sortedlines = natsorted(linelist)
+
+# make an empty list for the characters in the flag
+flag = []
+
+# find all characters in sortedlines that are 
+# inside quotes (using regex), and append them to 
+# the list of characters in the flag
+for l in sortedlines:
+    character = re.search(r&amp;quot;\w(?=&#39;)&amp;quot;, l)
+    flag.append(character.group())
+
+# print the flag as a string
+print(&amp;quot;&amp;quot;.join(flag))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;One obstacle I bumped into was the fact that the numbers in the parentheses aren&amp;rsquo;t very easy to sort because the single-digit numbers don&amp;rsquo;t start with &lt;code&gt;0&lt;/code&gt;. This means the normal sorting function (&lt;code&gt;sort()&lt;/code&gt;) would put numbers &lt;code&gt;10&lt;/code&gt;-&lt;code&gt;19&lt;/code&gt; before &lt;code&gt;2&lt;/code&gt;, because the sorting function first looks at the first digit, &lt;code&gt;1&lt;/code&gt;, which comes before &lt;code&gt;2&lt;/code&gt;. Instead, I needed to use &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Natural_sort_order&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;natural sorting&lt;/a&gt;, which treats multi-digit numbers as a single number.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;$ python3 vd1solution.py
+d35cr4mbl3_tH3_cH4r4cT3r5_ff63b0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;flag-1&#34;&gt;Flag&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;picoCTF{d35cr4mbl3_tH3_cH4r4cT3r5_ff63b0}&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;general-skills&#34;&gt;General Skills&lt;/h2&gt;
+&lt;h3 id=&#34;warmed-up&#34;&gt;Warmed Up&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;What is 0x3D (base 16) in decimal (base 10)?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;solution-2&#34;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Hexadecimal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hexadecimal&lt;/a&gt; is a numbering system much like the one we use in our everyday lives, except instead of base 10 (where the highest single digit is 9) it&amp;rsquo;s base 16 (where the highest single digit is F).&lt;/p&gt;
+&lt;p&gt;While &lt;a class=&#34;link&#34; href=&#34;https://owlcation.com/stem/Convert-Hex-to-Decimal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;there is a way to manually convert&lt;/a&gt; from hex (base 16) to decimal (base 10), it&amp;rsquo;s really a lot easier to just use a tool that can convert it for you:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/warmed-up.png&#34;
+	width=&#34;717&#34;
+	height=&#34;495&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/warmed-up_huaae437ca0400cfa2b8fba6038d2426f8_35116_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/warmed-up_huaae437ca0400cfa2b8fba6038d2426f8_35116_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;warmed-up.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;flag-2&#34;&gt;Flag&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;picoCTF{61}&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2warm&#34;&gt;2Warm&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Can you convert the number 42 (base 10) to binary (base 2)?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;solution-3&#34;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Binary_number&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Binary&lt;/a&gt; is another numbering system where there are only two possible digits: 0 and 1. Manual conversions from binary to decimal (and vice versa) are much more straightforward than conversions in hex.&lt;/p&gt;
+&lt;p&gt;I did this problem pretty quickly in my head, but &lt;a class=&#34;link&#34; href=&#34;https://www.khanacademy.org/math/algebra-home/alg-intro-to-algebra/algebra-alternate-number-bases/v/decimal-to-binary&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;this helpful KhanAcademy video&lt;/a&gt; explains the process well.&lt;/p&gt;
+&lt;p&gt;32 + 8 + 2 = 42&lt;/p&gt;
+&lt;p&gt;(&lt;strong&gt;1&lt;/strong&gt; * 32) + (&lt;strong&gt;0&lt;/strong&gt; * 16) + (&lt;strong&gt;1&lt;/strong&gt; * 8) + (&lt;strong&gt;0&lt;/strong&gt; * 4) + (&lt;strong&gt;1&lt;/strong&gt; * 2) + (&lt;strong&gt;0&lt;/strong&gt; * 1) = 42&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1 0 1 0 1 0&lt;/strong&gt; = 42&lt;/p&gt;
+&lt;h4 id=&#34;flag-3&#34;&gt;Flag&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;picoCTF{101010}&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;web-exploitation&#34;&gt;Web Exploitation&lt;/h2&gt;
+&lt;h3 id=&#34;insp3ct0r&#34;&gt;Insp3ct0r&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Kishor Balan tipped us off that the following code may need inspection: &lt;code&gt;https://jupiter.challenges.picoctf.org/problem/41511/&lt;/code&gt; or &lt;code&gt;http://jupiter.challenges.picoctf.org:41511&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;solution-4&#34;&gt;Solution&lt;/h4&gt;
+&lt;p&gt;The description for this challenge basically tells you what you need to do right off the bat.&lt;/p&gt;
+&lt;p&gt;I visited the URL in the description and it brought me to this rather nondescript webpage:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/insp3ct0r-site.png&#34;
+	width=&#34;951&#34;
+	height=&#34;360&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/insp3ct0r-site_hu9fe1b5da528faf214c7a0182b9b1afef_12019_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/insp3ct0r-site_hu9fe1b5da528faf214c7a0182b9b1afef_12019_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;insp3ct0r-site.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;264&#34;
+		data-flex-basis=&#34;634px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;There was some useful information under the &amp;ldquo;How&amp;rdquo; tab about the languages this person used to make the site (HTML, CSS, and Javascript). These are the typical languages you&amp;rsquo;ll find that make up most modern-day websites.&lt;/p&gt;
+&lt;p&gt;Chrome has a developer tools panel useful for debugging and editing a website&amp;rsquo;s source code inside your browser. You can access this by right-clicking a webpage and selecting &amp;ldquo;&lt;strong&gt;Inspect&lt;/strong&gt;&amp;rdquo;, or just using the keyboard shortcut (&lt;code&gt;Ctrl + Shift + I&lt;/code&gt; if you&amp;rsquo;re using Linux).&lt;/p&gt;
+&lt;p&gt;Once I was in the developer console (under the &amp;ldquo;Elements&amp;rdquo; tab), I saw some HTML tags that I expanded to find the first part of the flag:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/insp3ct0r-html.png&#34;
+	width=&#34;604&#34;
+	height=&#34;382&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/insp3ct0r-html_hu73458c6271aeca8f8bf3fb3af48502d0_56181_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/insp3ct0r-html_hu73458c6271aeca8f8bf3fb3af48502d0_56181_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;insp3ct0r-html.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Then I popped on over to the &amp;ldquo;Sources&amp;rdquo; tab to find the files that contained the Javascript and CSS for the website (the HTML was here as well, under &lt;code&gt;(index)&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mycss.css&lt;/code&gt;, written in CSS, had the second part of the flag&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/insp3ct0r-css.png&#34;
+	width=&#34;787&#34;
+	height=&#34;449&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/insp3ct0r-css_hudff1c285594db64f9bb6105213f59d31_69371_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/insp3ct0r-css_hudff1c285594db64f9bb6105213f59d31_69371_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;insp3ct0r-css.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;175&#34;
+		data-flex-basis=&#34;420px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;And &lt;code&gt;myjs.js&lt;/code&gt;, written in (you guessed it) Javascript, had the third part of the flag!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/docs/picogym/insp3ct0r-js.png&#34;
+	width=&#34;787&#34;
+	height=&#34;382&#34;
+	srcset=&#34;https://angelajt.com/docs/picogym/insp3ct0r-js_hu765861f43b01fd9533fccac483541ec2_80621_480x0_resize_box_3.png 480w, https://angelajt.com/docs/picogym/insp3ct0r-js_hu765861f43b01fd9533fccac483541ec2_80621_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;insp3ct0r-js.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;494px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;flag-4&#34;&gt;Flag&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;picoCTF{tru3_d3t3ct1ve_0r_ju5t_lucky?832b0699}&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://angelajt.com/photos/chipmunk/</link>
+        <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/photos/chipmunk/</guid>
+        <description>&lt;p&gt;A valiant chipmunk at Crater Lake&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://angelajt.com/photos/chipmunk/another.jpg&#34;
+	width=&#34;3024&#34;
+	height=&#34;4032&#34;
+	srcset=&#34;https://angelajt.com/photos/chipmunk/another_hub274152b7a1b753be60026192cf113e1_476336_480x0_resize_q75_box.jpg 480w, https://angelajt.com/photos/chipmunk/another_hub274152b7a1b753be60026192cf113e1_476336_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;another&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;75&#34;
+		data-flex-basis=&#34;180px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://angelajt.com/photos/ocean-sunset/</link>
+        <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/photos/ocean-sunset/</guid>
+        <description>&lt;p&gt;Sunset over Malacca Strait&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title></title>
+        <link>https://angelajt.com/photos/forest/</link>
+        <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/photos/forest/</guid>
+        <description>&lt;p&gt;Morning at South Lake Tahoe&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

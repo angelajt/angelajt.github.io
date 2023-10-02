@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>electronics on Angela&#39;s Blog</title>
+        <link>https://angelajt.com/tags/electronics/</link>
+        <description>Recent content in electronics on Angela&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en</language>
+        <copyright>&amp;copy; 2021 Angela Traugott 
+</copyright>
+        <lastBuildDate>Tue, 15 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://angelajt.com/tags/electronics/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DIY Light Sensor with BH1750 and FeatherS2</title>
+        <link>https://angelajt.com/docs/lightsensor/</link>
+        <pubDate>Tue, 15 Jun 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://angelajt.com/docs/lightsensor/</guid>
+        <description>&lt;h2 id=&#34;what-you-need&#34;&gt;What you need&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.adafruit.com/product/4681&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;BH1750 Light Sensor&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.adafruit.com/product/4769&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;FeatherS2&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.adafruit.com/product/4399&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;STEMMA cable&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;USB-C cable&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For getting measurements over WiFi:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi with &lt;a class=&#34;link&#34; href=&#34;https://www.home-assistant.io/installation/raspberrypi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Home Assistant&lt;/a&gt; installed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-you-dont-need&#34;&gt;What you DON&amp;rsquo;T need&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Soldering iron&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Breadboard&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;contents&#34;&gt;Contents&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;setup&#34; &gt;Setup&lt;/a&gt;&lt;/strong&gt; - wiring and installing libraries&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;usb&#34; &gt;Getting measurements through USB&lt;/a&gt;&lt;/strong&gt; - basic programming to talk to the light sensor through USB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Getting measurements over WiFi&lt;/strong&gt; (coming soon) - more advanced programming to talk to the light sensor over WiFi&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
