@@ -6,6 +6,7 @@ date: '2021-05-16'
 tags:
 - nature
 - info
+draft: true
 ---
 
 *(Featured image: An outdated 1910 illustration of the Irish Elk)*

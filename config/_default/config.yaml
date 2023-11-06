@@ -1,5 +1,5 @@
 baseURL: https://angelajt.com/
-title: Angela's Blog
+title: 
 
 # Comment when installing using Hugo Modules
 theme: stack
@@ -7,8 +7,7 @@ theme: stack
 # theme: github.com/wangchucheng/hugo-eureka
 
 paginate: 3
-copyright: >
-  &copy; 2021 Angela Traugott 
+copyright: 
 enableEmoji: true
 enableGitInfo: false
 summaryLength: 10
