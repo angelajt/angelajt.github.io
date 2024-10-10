@@ -30,9 +30,13 @@
 
 
 
+
+
+
+
 <html
   class="not-ready lg:text-base"
-  style="--bg: #faf8f1"
+  style="--bg: #f8f5d7"
   lang="en"
   dir="ltr"
 >
@@ -56,7 +60,7 @@
   
   <meta name="description" content="a. Set up a Raspberry Pi with Home Assistant
 Follow the Home Assistant installation instructions." />
-  <meta name="author" content="" />
+  <meta name="author" content="Angela" />
   
 
   
@@ -81,6 +85,10 @@ Follow the Home Assistant installation instructions." />
   
 
   
+  
+  <link rel="preload" as="image" href="http://localhost:1313/github.svg" />
+  
+  <link rel="preload" as="image" href="http://localhost:1313/linkedin.svg" />
   
   
 
@@ -190,7 +198,7 @@ Follow the Home Assistant installation instructions." />
 
     
     const metaTheme = document.querySelector('meta[name="theme-color"]');
-    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const lightBg = '#f8f5d7'.replace(/"/g, '');
     const setDark = (isDark) => {
       metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
       htmlClass[isDark ? 'add' : 'remove']('dark');
@@ -252,6 +260,32 @@ Follow the Home Assistant installation instructions." />
     </nav>
     
 
+    
+    <nav
+      class="mt-12 flex justify-center space-x-10 rtl:space-x-reverse dark:invert ltr:lg:ml-14 rtl:lg:mr-14 lg:mt-0 lg:items-center"
+    >
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/angelajt"
+        target="_blank"
+        rel="me"
+      >
+        github
+      </a>
+      
+      <a
+        class="h-7 w-7 text-[0] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/angelajt"
+        target="_blank"
+        rel="me"
+      >
+        linkedin
+      </a>
+      
+    </nav>
     
   </div>
 </header>
