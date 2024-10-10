@@ -2,7 +2,7 @@ baseURL: https://angelajt.com/
 title: 
 
 # Comment when installing using Hugo Modules
-theme: stack
+theme: paper
 # Uncomment eureka installing using Hugo Modules
 # theme: github.com/wangchucheng/hugo-eureka
 

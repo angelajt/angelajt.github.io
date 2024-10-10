@@ -2,7 +2,6 @@
 title: 5 Common Backyard Birds in Northern California
 date: '2021-05-14'
 tags: ["nature", "info"]
-draft: true
 ---
 
 Spring is underway and I've been enjoying listening to birdsong and spotting birds out my window, and I've also become more and more interested in being able to identify these little critters. Below is a small list of birds I see and hear a lot throughout the year, along with some interesting facts about them. 
