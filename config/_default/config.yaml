@@ -6,7 +6,7 @@ theme: paper
 # Uncomment eureka installing using Hugo Modules
 # theme: github.com/wangchucheng/hugo-eureka
 
-paginate: 3
+pagerSize: 3
 copyright: 
 enableEmoji: true
 enableGitInfo: false

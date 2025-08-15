@@ -13,7 +13,7 @@
       <link>http://localhost:1313/photos/chipmunk/</link>
       <pubDate>Fri, 05 Jul 2019 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/photos/chipmunk/</guid>
-      <description>&lt;p&gt;A valiant chipmunk at Crater Lake&lt;/p&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;another&#34; src=&#34;http://localhost:1313/photos/chipmunk/another.jpg&#34;&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;A valiant chipmunk at Crater Lake&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/photos/chipmunk/another.jpg&#34; alt=&#34;another&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title></title>
