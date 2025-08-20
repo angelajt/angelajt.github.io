@@ -1,27 +1,111 @@
-<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
-<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
-<df-messenger
-  location="us-central1"
-  project-id="heartbot2"
-  agent-id="653a6270-05fd-4b6c-8203-6d4708570972"
-  language-code="en"
-  max-query-length="-1">
-  <df-messenger-chat
-    chat-title="heartbot module 1">
-  </df-messenger-chat>
-</df-messenger>
-<style>
-  df-messenger {
-    z-index: 999;
-    position: fixed;
-    --df-messenger-font-color: #000;
-    --df-messenger-font-family: Google Sans;
-    --df-messenger-chat-background: #f3f6fc;
-    --df-messenger-message-user-background: #d3e3fd;
-    --df-messenger-message-bot-background: #fff;
-    bottom: 0;
-    right: 0;
-    top: 0;
-    width: 400px;
-  }
-</style>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Heartbot Modules</title>
+
+  <!-- Dialogflow CX web messenger -->
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js" defer></script>
+
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 1rem; }
+    label { font-weight: 600; margin-right: .5rem; }
+    select { padding: .35rem .5rem; font-size: 1rem; }
+    /* fixed right-side panel */
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Google Sans, system-ui, sans-serif;
+      --df-messenger-chat-background: #f3f6fc;
+      --df-messenger-message-user-background: #d3e3fd;
+      --df-messenger-message-bot-background: #fff;
+      bottom: 0; right: 0; top: 0; width: 350px;
+    }
+    main { margin-right: 370px; }
+  </style>
+</head>
+<body>
+  <main>
+    <label for="module">Module:</label>
+    <select id="module">
+      <option value="1" selected>Module 1</option>
+      <option value="2">Module 2</option>
+      <option value="3">Module 3</option>
+      <option value="4">Module 4</option>
+    </select>
+
+    <!-- where the widget goes -->
+    <div id="bot"></div>
+  </main>
+
+  <script>
+    const PROJECT_ID = "heartbot2";
+    const LOCATION   = "us-central1";
+    const LANG       = "en";
+
+    // Map module number -> agent-id + title
+    const MODULES = {
+      "1": { id: "653a6270-05fd-4b6c-8203-6d4708570972", title: "heartbot module 1" },
+      "2": { id: "d63de907-dbb3-48d9-838c-739b2f4cd046", title: "heartbot module 2" },
+      "3": { id: "4e3ce067-0ad4-4787-8fc9-368b09bb9e9a", title: "heartbot module 3" },
+      "4": { id: "fa5cfcb5-4340-4506-908b-8d3e92f39c4f", title: "heartbot module 4" }
+    };
+
+    const select = document.getElementById("module");
+    const mount  = document.getElementById("bot");
+
+    // Remove messenger-specific session keys so a brand-new conversation starts
+    function clearDfSessionStorage() {
+      try {
+        const toRemove = [];
+        for (let i = 0; i < sessionStorage.length; i++) {
+          const key = sessionStorage.key(i);
+          if (!key) continue;
+          // Dialogflow CX web messenger stores keys that include 'df-messenger' / 'dfMessenger'
+          if (key.toLowerCase().includes("df-messenger") || key.toLowerCase().includes("dfmessenger")) {
+            toRemove.push(key);
+          }
+        }
+        toRemove.forEach(k => sessionStorage.removeItem(k));
+      } catch {}
+    }
+
+    async function render(moduleNum) {
+      const mod = MODULES[moduleNum];
+      if (!mod) return;
+
+      // remove prior widget
+      mount.innerHTML = "";
+
+      // ensure custom element is registered before creating
+      if (!customElements.get("df-messenger")) {
+        await customElements.whenDefined("df-messenger");
+      }
+
+      // clear any carried-over conversation
+      clearDfSessionStorage();
+
+      // create fresh widget
+      const df = document.createElement("df-messenger");
+      df.setAttribute("location", LOCATION);
+      df.setAttribute("project-id", PROJECT_ID);
+      df.setAttribute("agent-id", mod.id);
+      df.setAttribute("language-code", LANG);
+      df.setAttribute("max-query-length", "-1");
+
+      const chat = document.createElement("df-messenger-chat");
+      chat.setAttribute("chat-title", mod.title);
+      df.appendChild(chat);
+
+      mount.appendChild(df);
+    }
+
+    window.addEventListener("DOMContentLoaded", () => {
+      render(select.value);
+      select.addEventListener("change", () => render(select.value));
+    });
+  </script>
+</body>
+</html>
